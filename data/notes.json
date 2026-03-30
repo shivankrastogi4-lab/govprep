@@ -1,448 +1,68 @@
 {
-  "subjects": [
-    "Reasoning",
-    "Quantitative Aptitude",
-    "English",
-    "General Awareness"
-  ],
   "notes": [
     {
-      "id": 1774900374,
-      "subject": "Current Affairs",
-      "topic": "Bastar close to being considered Naxal-free, possibility of revival extremely remote: IGP",
-      "difficulty": "Easy",
-      "content": "Bastar close to being considered Naxal-free, possibility of revival extremely remote: IGP हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Bastar close to being considered Naxal-free, possibility of revival extremely remote: IGP",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "GK",
+      "content": "Daily Current Affairs Updated"
     },
     {
-      "id": 1774900375,
-      "subject": "Current Affairs",
-      "topic": "Kerala Assembly Elections 2026: Election officials plan ‘halwa campaign’ to welcome first-time voters",
-      "difficulty": "Easy",
-      "content": "Kerala Assembly Elections 2026: Election officials plan ‘halwa campaign’ to welcome first-time voters हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Kerala Assembly Elections 2026: Election officials plan ‘halwa campaign’ to welcome first-time voters",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Reasoning",
+      "content": "Coding Decoding: Pattern-based logic questions"
     },
     {
-      "id": 1774900376,
-      "subject": "Current Affairs",
-      "topic": "Kerala Assembly Elections 2026: Pinarayi signals willingness to accept Satheesan’s challenge for a one-to-one debate on LDF governance",
-      "difficulty": "Easy",
-      "content": "Kerala Assembly Elections 2026: Pinarayi signals willingness to accept Satheesan’s challenge for a one-to-one debate on LDF governance हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Kerala Assembly Elections 2026: Pinarayi signals willingness to accept Satheesan’s challenge for a one-to-one debate on LDF governance",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Reasoning",
+      "content": "Blood Relation: Family tree problems"
     },
     {
-      "id": 1774900377,
-      "subject": "Current Affairs",
-      "topic": "Kerala Assembly Elections 2026: At central Travancore rally, Rahul promises to raise rubber price to ₹250",
-      "difficulty": "Easy",
-      "content": "Kerala Assembly Elections 2026: At central Travancore rally, Rahul promises to raise rubber price to ₹250 हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Kerala Assembly Elections 2026: At central Travancore rally, Rahul promises to raise rubber price to ₹250",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Reasoning",
+      "content": "Direction Test: Left-right orientation"
     },
     {
-      "id": 1774900383,
-      "subject": "Current Affairs",
-      "topic": "Zelensky says allies asked him to scale back attacks on Russian energy",
-      "difficulty": "Easy",
-      "content": "Zelensky says allies asked him to scale back attacks on Russian energy हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Zelensky says allies asked him to scale back attacks on Russian energy",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Reasoning",
+      "content": "Syllogism: Logical Venn diagram problems"
     },
     {
-      "id": 1774900384,
-      "subject": "Current Affairs",
-      "topic": "Most Syrian refugees in Germany expected to return home in three years, Merz says",
-      "difficulty": "Easy",
-      "content": "Most Syrian refugees in Germany expected to return home in three years, Merz says हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Most Syrian refugees in Germany expected to return home in three years, Merz says",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Reasoning",
+      "content": "Seating Arrangement: Puzzle solving tricks"
     },
     {
-      "id": 1774900385,
-      "subject": "Current Affairs",
-      "topic": "At central Travancore rally, Rahul promises to raise rubber price to ₹250",
-      "difficulty": "Easy",
-      "content": "At central Travancore rally, Rahul promises to raise rubber price to ₹250 हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "At central Travancore rally, Rahul promises to raise rubber price to ₹250",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Quant",
+      "content": "Percentage: Basic formula and tricks"
     },
     {
-      "id": 1774900386,
-      "subject": "Current Affairs",
-      "topic": "Barring one, entire top leadership of Maoists wiped out, Amit Shah tells Lok Sabha",
-      "difficulty": "Easy",
-      "content": "Barring one, entire top leadership of Maoists wiped out, Amit Shah tells Lok Sabha हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Barring one, entire top leadership of Maoists wiped out, Amit Shah tells Lok Sabha",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Quant",
+      "content": "Profit & Loss: CP/SP formulas"
     },
     {
-      "id": 1774900387,
-      "subject": "Current Affairs",
-      "topic": "Centre eyes new regulation to cover social media users",
-      "difficulty": "Easy",
-      "content": "Centre eyes new regulation to cover social media users हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Centre eyes new regulation to cover social media users",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Quant",
+      "content": "Time & Work: Work efficiency concept"
     },
     {
-      "id": 1774900388,
-      "subject": "Current Affairs",
-      "topic": "Delhi Police arrests Lashkar-e-Taiba operative",
-      "difficulty": "Easy",
-      "content": "Delhi Police arrests Lashkar-e-Taiba operative हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Delhi Police arrests Lashkar-e-Taiba operative",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Quant",
+      "content": "Simple Interest: SI = (P×R×T)/100"
     },
     {
-      "id": 1774900389,
-      "subject": "Current Affairs",
-      "topic": "More than 85,000 cases disposed of in Chamarajanagar during this year’s Mega Lok Adalat",
-      "difficulty": "Easy",
-      "content": "More than 85,000 cases disposed of in Chamarajanagar during this year’s Mega Lok Adalat हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "More than 85,000 cases disposed of in Chamarajanagar during this year’s Mega Lok Adalat",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "Quant",
+      "content": "Speed Distance: Distance = Speed × Time"
     },
     {
-      "id": 1774900390,
-      "subject": "Current Affairs",
-      "topic": "How the US could try to seize Iran's Kharg Island",
-      "difficulty": "Easy",
-      "content": "How the US could try to seize Iran's Kharg Island हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "How the US could try to seize Iran's Kharg Island",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "English",
+      "content": "Tense Rules: Present, Past, Future"
     },
     {
-      "id": 1774900391,
-      "subject": "Current Affairs",
-      "topic": "Kris Jenner's image spreads in Chinese social media good luck trend",
-      "difficulty": "Easy",
-      "content": "Kris Jenner's image spreads in Chinese social media good luck trend हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Kris Jenner's image spreads in Chinese social media good luck trend",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "English",
+      "content": "Articles: A, An, The usage"
     },
     {
-      "id": 1774900392,
-      "subject": "Current Affairs",
-      "topic": "Tamil Nadu CM Stalin, TVK leader Vijay and other leaders file nominations on day one",
-      "difficulty": "Easy",
-      "content": "Tamil Nadu CM Stalin, TVK leader Vijay and other leaders file nominations on day one हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Tamil Nadu CM Stalin, TVK leader Vijay and other leaders file nominations on day one",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "English",
+      "content": "Prepositions: In, On, At rules"
     },
     {
-      "id": 1774900393,
-      "subject": "Current Affairs",
-      "topic": "Congress slams attack on its candidate in Assam election",
-      "difficulty": "Easy",
-      "content": "Congress slams attack on its candidate in Assam election हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "Congress slams attack on its candidate in Assam election",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
+      "category": "English",
+      "content": "Active Passive Voice basics"
     },
     {
-      "id": 1774898892,
-      "subject": "Current Affairs",
-      "topic": "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai",
-      "difficulty": "Easy",
-      "content": "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
-    },
-    {
-      "id": 1774898893,
-      "subject": "Current Affairs",
-      "topic": "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay",
-      "difficulty": "Easy",
-      "content": "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
-    },
-    {
-      "id": 1774898894,
-      "subject": "Current Affairs",
-      "topic": "BDA calls tender for Peripheral Ring Road-1 project",
-      "difficulty": "Easy",
-      "content": "BDA calls tender for Peripheral Ring Road-1 project हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "BDA calls tender for Peripheral Ring Road-1 project",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
-    },
-    {
-      "id": 1774898895,
-      "subject": "Current Affairs",
-      "topic": "CPI(M) names candidates for five constituencies",
-      "difficulty": "Easy",
-      "content": "CPI(M) names candidates for five constituencies हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "CPI(M) names candidates for five constituencies",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
-    },
-    {
-      "id": 1774898896,
-      "subject": "Current Affairs",
-      "topic": "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore",
-      "difficulty": "Easy",
-      "content": "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-      "key_points": [
-        "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore",
-        "यह करंट अफेयर्स से जुड़ा है",
-        "परीक्षा में पूछे जाने की संभावना है"
-      ],
-      "formula": null,
-      "example": null
-    },
-    {
-      "id": 1,
-      "subject": "Reasoning",
-      "topic": "Syllogism",
-      "difficulty": "Medium",
-      "content": "Syllogism involves deriving conclusions from given statements. Always follow: All A are B → Some B are A (converse). No A is B → No B is A. Some A are B → Some B are A. Key tip: Use Venn diagrams for accuracy.",
-      "key_points": [
-        "Universal Positive: All A are B",
-        "Universal Negative: No A is B",
-        "Particular Positive: Some A are B",
-        "Particular Negative: Some A are not B",
-        "Always draw Venn diagrams to eliminate wrong choices"
-      ],
-      "formula": null,
-      "example": "Statements: All cats are dogs. Some dogs are rats. Conclusion: Some rats are cats → FALSE. Some cats are dogs → TRUE (conversion of first statement)"
-    },
-    {
-      "id": 2,
-      "subject": "Reasoning",
-      "topic": "Blood Relations",
-      "difficulty": "Easy",
-      "content": "Blood relation questions test family tree understanding. Always draw a family tree while solving. Key relationships: Father's father = Paternal Grandfather. Mother's brother = Maternal Uncle.",
-      "key_points": [
-        "Always draw a family tree diagram",
-        "Identify gender from terms used",
-        "+Generation = elder, -Generation = younger",
-        "Avoid assumptions — go only by given info"
-      ],
-      "formula": null,
-      "example": "A is B's sister. B is C's brother. C is D's son. D is a woman. → A is D's daughter."
-    },
-    {
-      "id": 3,
-      "subject": "Quantitative Aptitude",
-      "topic": "Percentage",
-      "difficulty": "Easy",
-      "content": "Percentage is a ratio expressed as a fraction of 100. Core formula: Percentage = (Part/Whole) × 100. Used in profit/loss, discount, tax, and data interpretation.",
-      "key_points": [
-        "x% of y = y% of x (symmetry trick)",
-        "% increase = (new - old)/old × 100",
-        "% decrease = (old - new)/old × 100",
-        "Successive % change: a% then b% = a + b + ab/100"
-      ],
-      "formula": "Percentage = (Value / Total Value) × 100",
-      "example": "If price increases from ₹500 to ₹600: % increase = (100/500)×100 = 20%"
-    },
-    {
-      "id": 4,
-      "subject": "Quantitative Aptitude",
-      "topic": "Simple & Compound Interest",
-      "difficulty": "Medium",
-      "content": "Interest is the extra money paid on a principal amount. SI grows linearly, CI grows exponentially. CI is always ≥ SI for same P, R, T.",
-      "key_points": [
-        "SI = PRT/100",
-        "CI = P(1 + R/100)^T - P",
-        "CI - SI for 2 years = PR²/10000",
-        "If CI is half-yearly: R becomes R/2, T becomes 2T"
-      ],
-      "formula": "SI = (P × R × T)/100 | CI = P[(1 + R/100)^n - 1]",
-      "example": "P=₹1000, R=10%, T=2 years. SI=₹200. CI=1000×(1.1)²-1000=₹210. Difference=₹10."
-    },
-    {
-      "id": 5,
-      "subject": "English",
-      "topic": "Tenses",
-      "difficulty": "Easy",
-      "content": "Tenses indicate the time of action. There are 3 main tenses (Past, Present, Future), each with 4 aspects (Simple, Continuous, Perfect, Perfect Continuous) = 12 tenses total.",
-      "key_points": [
-        "Simple Present: V1/V1+s/es (He goes)",
-        "Present Continuous: is/am/are + V-ing (She is going)",
-        "Present Perfect: has/have + V3 (They have gone)",
-        "Past Simple: V2 (He went)",
-        "Future Simple: will/shall + V1 (She will go)"
-      ],
-      "formula": null,
-      "example": "I study every day (Simple Present). I am studying now (Present Continuous). I have studied (Present Perfect)."
-    },
-    {
-      "id": 6,
-      "subject": "English",
-      "topic": "Reading Comprehension Strategy",
-      "difficulty": "Medium",
-      "content": "RC passages test your ability to understand, infer, and evaluate written text. A strategic approach saves time and improves accuracy significantly.",
-      "key_points": [
-        "Skim the passage first (30 seconds) to get the gist",
-        "Read all questions before reading in detail",
-        "For 'tone' questions: identify positive/negative/neutral",
-        "Eliminate extreme answer choices (always, never, only)",
-        "Vocabulary in context: use surrounding sentences"
-      ],
-      "formula": null,
-      "example": "If asked 'What is the author's main purpose?' — look for the central argument, not a detail. Usually stated in first or last paragraph."
-    },
-    {
-      "id": 7,
-      "subject": "General Awareness",
-      "topic": "Indian Constitution — Key Articles",
-      "difficulty": "Hard",
-      "content": "The Indian Constitution is the supreme law of India. It has 448 articles, 25 parts, and 12 schedules. Knowing key articles is essential for all competitive exams.",
-      "key_points": [
-        "Article 14: Right to Equality",
-        "Article 19: Right to Freedom (6 freedoms)",
-        "Article 21: Right to Life and Personal Liberty",
-        "Article 32: Right to Constitutional Remedies (Heart of Constitution)",
-        "Article 356: President's Rule (State Emergency)",
-        "Article 370: (Abrogated in 2019) — J&K special status"
-      ],
-      "formula": null,
-      "example": "Remember: 14=Equality, 15=Discrimination, 16=Employment, 17=Abolish Untouchability, 18=Titles, 19=Freedom, 20=Conviction, 21=Life."
-    },
-    {
-      "id": 8,
-      "subject": "General Awareness",
-      "topic": "Important Banking Terms",
-      "difficulty": "Medium",
-      "content": "Banking terminology is crucial for Banking and SSC exams. These terms appear in both objective and descriptive questions.",
-      "key_points": [
-        "Repo Rate: Rate at which RBI lends to commercial banks",
-        "Reverse Repo: Rate at which RBI borrows from banks",
-        "CRR (Cash Reserve Ratio): % of deposits banks keep with RBI",
-        "SLR (Statutory Liquidity Ratio): % in liquid assets",
-        "NPA: Non-Performing Asset (loan not repaid for 90+ days)",
-        "RTGS: Real Time Gross Settlement (min ₹2 lakh)"
-      ],
-      "formula": null,
-      "example": "If RBI increases Repo Rate → banks borrow at higher cost → loans become expensive → inflation cools down."
-    },
-    {
-      "id": 9,
-      "subject": "Reasoning",
-      "topic": "Series Completion — Number & Letter",
-      "difficulty": "Medium",
-      "content": "Series questions involve identifying the pattern and finding the missing term. Patterns can be arithmetic, geometric, alternating, prime-based, or square/cube-based.",
-      "key_points": [
-        "Check differences first (arithmetic/geometric)",
-        "If differences don't work — try squares, cubes, primes",
-        "Alternating series: check odd and even positions separately",
-        "Letter series: convert letters to numbers (A=1, Z=26)",
-        "Mixed series: look for two interleaved patterns"
-      ],
-      "formula": null,
-      "example": "2, 6, 12, 20, 30, ? → Differences: 4, 6, 8, 10, 12 → Answer: 42"
-    },
-    {
-      "id": 10,
-      "subject": "Quantitative Aptitude",
-      "topic": "Time, Speed and Distance",
-      "difficulty": "Medium",
-      "content": "TSD problems are fundamental in all competitive exams. The relationship: Distance = Speed × Time. Always convert units to the same system before solving.",
-      "key_points": [
-        "1 km/hr = 5/18 m/s | 1 m/s = 18/5 km/hr",
-        "Average speed = 2xy/(x+y) when distances are equal",
-        "Relative speed: same dir = |a-b|, opp dir = a+b",
-        "Train problems: Length of train must be added to distance"
-      ],
-      "formula": "D = S × T | Average Speed = 2S1×S2/(S1+S2)",
-      "example": "A train 200m long passes a 400m bridge at 60 km/hr. Time = 600m ÷ (60×5/18) m/s = 600÷16.67 = 36 seconds."
+      "category": "English",
+      "content": "Synonyms & Antonyms tricks"
     }
   ]
 }
