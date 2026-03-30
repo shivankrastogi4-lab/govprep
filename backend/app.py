@@ -289,3 +289,21 @@ if __name__ == '__main__':
     print("⚙️  Admin: http://127.0.0.1:5000/admin\n")
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
+# ✅ FIX: Serve notes.json directly (for frontend compatibility)
+@app.route('/data/notes.json')
+def serve_notes_json():
+    data = load_json('notes.json')
+    return jsonify(data)
+
+
+# ✅ Optional (recommended): serve other JSON too
+@app.route('/data/quiz.json')
+def serve_quiz_json():
+    data = load_json('quiz.json')
+    return jsonify(data)
+
+
+@app.route('/data/notifications.json')
+def serve_notifications_json():
+    data = load_json('notifications.json')
+    return jsonify(data)
