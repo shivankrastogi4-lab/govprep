@@ -1,138 +1,30 @@
-{
-  "ssc": {
-    "id": "ssc",
-    "name": "SSC CGL",
-    "full_name": "Staff Selection Commission Combined Graduate Level",
-    "category": "SSC",
-    "icon": "🏛️",
-    "color": "#e63946",
-    "vacancy_approx": "7500+",
-    "salary": "₹25,500 – ₹1,12,400",
-    "eligibility": "Graduate from any recognized university",
-    "syllabus": {
-      "Tier I": ["General Intelligence & Reasoning", "General Awareness", "Quantitative Aptitude", "English Comprehension"],
-      "Tier II": ["Mathematical Abilities", "Reasoning & General Intelligence", "English Language", "General Awareness", "Computer Knowledge", "Statistics (optional)", "General Studies Finance & Economics (optional)"],
-      "Tier III": ["Descriptive Paper (Essay/Letter Writing)"],
-      "Tier IV": ["Computer Proficiency Test / Skill Test (if applicable)"]
-    },
-    "exam_pattern": {
-      "Tier I": {"questions": 100, "marks": 200, "time": "60 min", "negative": "0.5"},
-      "Tier II": {"questions": 390, "marks": 390, "time": "2.5 hrs each", "negative": "1"},
-      "Tier III": {"questions": 1, "marks": 100, "time": "60 min", "negative": "None"}
-    },
-    "strategy": [
-      "Start with NCERT books for General Awareness (Class 6–12)",
-      "Practice 30–50 Quant questions daily from RS Aggarwal",
-      "Solve previous year papers for Reasoning patterns",
-      "Read one English editorial daily for vocabulary and comprehension",
-      "Give 2 mock tests per week and analyze mistakes",
-      "Focus on Tier I first — it is the gateway exam"
-    ],
-    "previous_questions": [
-      {"q": "If FRIEND is coded as HUMJTK, how is CANDLE coded?", "options": ["EDRIRL", "DCQHQK", "EDRJQK", "EDRJQL"], "answer": 0, "year": "2023"},
-      {"q": "A sum of ₹2000 amounts to ₹2226.05 in 2 years at CI. Find the rate.", "options": ["5%", "5.5%", "6%", "4.5%"], "answer": 0, "year": "2022"},
-      {"q": "Choose the correctly spelt word:", "options": ["Questionnaire", "Questionnair", "Questionnare", "Questionnairre"], "answer": 0, "year": "2023"}
-    ]
-  },
-  "ibps_po": {
-    "id": "ibps_po",
-    "name": "IBPS PO",
-    "full_name": "Institute of Banking Personnel Selection – Probationary Officer",
-    "category": "Banking",
-    "icon": "🏦",
-    "color": "#457b9d",
-    "vacancy_approx": "4000+",
-    "salary": "₹52,000 – ₹55,000",
-    "eligibility": "Graduate from any recognised university (min. 60% for some banks)",
-    "syllabus": {
-      "Prelims": ["English Language", "Quantitative Aptitude", "Reasoning Ability"],
-      "Mains": ["Reasoning & Computer Aptitude", "General/Economy/Banking Awareness", "English Language", "Data Analysis & Interpretation"],
-      "Interview": ["Banking Knowledge", "Current Affairs", "Personal Background"]
-    },
-    "exam_pattern": {
-      "Prelims": {"questions": 100, "marks": 100, "time": "60 min", "negative": "0.25"},
-      "Mains": {"questions": 155, "marks": 200, "time": "3 hrs", "negative": "0.25"},
-      "Interview": {"questions": "N/A", "marks": 100, "time": "30 min", "negative": "None"}
-    },
-    "strategy": [
-      "Strengthen Data Interpretation — it fetches maximum marks in Mains",
-      "Practice puzzle-based Reasoning daily (seating, scheduling)",
-      "Read The Hindu / Economic Times for Banking Awareness",
-      "Improve reading speed for English (aim 250 words/min)",
-      "Attempt 3 full mocks per week after basics are done",
-      "Learn banking terminology: REPO rate, CRR, SLR, NPA, etc."
-    ],
-    "previous_questions": [
-      {"q": "Who regulates the banking sector in India?", "options": ["SEBI", "RBI", "NABARD", "SIDBI"], "answer": 1, "year": "2023"},
-      {"q": "A train 150m long passes a pole in 15 sec. Its speed is:", "options": ["10 m/s", "20 m/s", "30 m/s", "40 m/s"], "answer": 0, "year": "2022"},
-      {"q": "In which year was IBPS established?", "options": ["1975", "1984", "1990", "2011"], "answer": 0, "year": "2023"}
-    ]
-  },
-  "rrb_ntpc": {
-    "id": "rrb_ntpc",
-    "name": "RRB NTPC",
-    "full_name": "Railway Recruitment Board – Non Technical Popular Categories",
-    "category": "Railways",
-    "icon": "🚆",
-    "color": "#2d6a4f",
-    "vacancy_approx": "35000+",
-    "salary": "₹19,900 – ₹35,400",
-    "eligibility": "12th Pass / Graduate depending on the post",
-    "syllabus": {
-      "CBT 1": ["Mathematics", "General Intelligence & Reasoning", "General Awareness"],
-      "CBT 2": ["Mathematics", "General Intelligence & Reasoning", "General Awareness (Advanced)"],
-      "Typing / Skill Test": ["As applicable to the post"]
-    },
-    "exam_pattern": {
-      "CBT 1": {"questions": 100, "marks": 100, "time": "90 min", "negative": "1/3"},
-      "CBT 2": {"questions": 120, "marks": 120, "time": "90 min", "negative": "1/3"}
-    },
-    "strategy": [
-      "Master Indian Railways history and facts for GK",
-      "Arithmetic (percentage, profit/loss, SI/CI) is heavily tested",
-      "Focus on Static GK: capitals, rivers, awards, sports",
-      "Practice coding-decoding and series for Reasoning",
-      "Attempt RRB-specific previous papers available online",
-      "Current Affairs: last 6 months before exam"
-    ],
-    "previous_questions": [
-      {"q": "The headquarter of Railway Board is located in:", "options": ["Mumbai", "Chennai", "New Delhi", "Kolkata"], "answer": 2, "year": "2023"},
-      {"q": "If 15% of a number is 45, what is the number?", "options": ["250", "300", "350", "200"], "answer": 1, "year": "2022"},
-      {"q": "Which of these is India's first semi-high speed train?", "options": ["Shatabdi", "Rajdhani", "Vande Bharat", "Duronto"], "answer": 2, "year": "2023"}
-    ]
-  },
-  "upsc_cse": {
-    "id": "upsc_cse",
-    "name": "UPSC CSE",
-    "full_name": "Union Public Service Commission Civil Services Examination",
-    "category": "State Exams",
-    "icon": "⚖️",
-    "color": "#8338ec",
-    "vacancy_approx": "1000+",
-    "salary": "₹56,100 – ₹2,50,000",
-    "eligibility": "Graduate from any recognised university",
-    "syllabus": {
-      "Prelims": ["General Studies Paper I", "CSAT (Paper II – Qualifying)"],
-      "Mains": ["Essay", "GS I (History, Geography, Society)", "GS II (Polity, Governance, IR)", "GS III (Economy, Environment, Science)", "GS IV (Ethics)", "Optional Paper I", "Optional Paper II"],
-      "Interview": ["Personality Test"]
-    },
-    "exam_pattern": {
-      "Prelims GS": {"questions": 100, "marks": 200, "time": "2 hrs", "negative": "0.66"},
-      "Mains": {"questions": "9 papers", "marks": 1750, "time": "3 hrs each", "negative": "None"},
-      "Interview": {"questions": "N/A", "marks": 275, "time": "~45 min", "negative": "None"}
-    },
-    "strategy": [
-      "NCERT foundation (Class 6–12) is non-negotiable",
-      "Read one standard book per topic (Laxmikanth for Polity, Bipin Chandra for History)",
-      "Make concise notes from day one — revision is key",
-      "The Hindu + PIB reading daily for current affairs",
-      "Write answer practice from Month 3 onwards",
-      "Choose optional wisely — pick based on interest + availability of material"
-    ],
-    "previous_questions": [
-      {"q": "Which Article of Indian Constitution deals with Financial Emergency?", "options": ["Article 352", "Article 356", "Article 360", "Article 370"], "answer": 2, "year": "2023"},
-      {"q": "The 'Preamble' of Indian Constitution was amended by which Amendment?", "options": ["42nd", "44th", "52nd", "86th"], "answer": 0, "year": "2022"},
-      {"q": "Which river is known as 'Dakshin Ganga'?", "options": ["Mahanadi", "Godavari", "Krishna", "Kaveri"], "answer": 1, "year": "2023"}
-    ]
-  }
-}
+@app.route('/exam/<exam_name>')
+def exam_page(exam_name):
+    exams = load_json('exams.json')
+
+    # 🔥 FIX: dict handle karo
+    if isinstance(exams, dict):
+        exam_data = exams.get(exam_name)
+    else:
+        exam_data = None
+        for exam in exams:
+            if isinstance(exam, dict) and exam.get('slug') == exam_name:
+                exam_data = exam
+                break
+
+    # fallback
+    if not exam_data:
+        exam_data = {
+            "name": exam_name.upper(),
+            "full_name": "Details coming soon...",
+            "category": "General",
+            "vacancy_approx": "N/A",
+            "salary": "N/A",
+            "eligibility": "N/A",
+            "syllabus": {},
+            "exam_pattern": {},
+            "strategy": [],
+            "previous_questions": []
+        }
+
+    return render_template('exam.html', exam=exam_data)
