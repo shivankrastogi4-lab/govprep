@@ -6,7 +6,6 @@ Run: python app.py
 from flask import Flask, render_template, jsonify, request, session, redirect
 import json
 import os
-from datetime import datetime
 from functools import wraps
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
@@ -60,29 +59,58 @@ def videos_page():
 def progress_page():
     return render_template('progress.html')
 
+# ─── 🔥 EXAM PAGE ROUTE ─────────────────────────────────
+
+@app.route('/exam/<exam_name>')
+def exam_page(exam_name):
+    exams = load_json('exams.json')
+
+    exam_data = None
+    for exam in exams:
+        if exam.get('slug') == exam_name:
+            exam_data = exam
+            break
+
+    if not exam_data:
+        exam_data = {
+            "name": exam_name.upper(),
+            "description": "Details coming soon...",
+            "category": "General",
+            "vacancies": "N/A"
+        }
+
+    return render_template('exam.html', exam=exam_data)
+
+# ─── 🔥 CURRENT AFFAIRS DETAIL ROUTE ─────────────────────
+
+@app.route('/current-affair/<int:index>')
+def current_affair_detail(index):
+    data = load_json('notifications.json')['notifications']
+
+    if index >= len(data):
+        return "Not Found", 404
+
+    return render_template('current_affair.html', item=data[index])
+
 # ─── API ROUTES ──────────────────────────────────────────
 
 @app.route('/api/notes')
 def get_notes():
-    data = load_json('notes.json')
-    return jsonify(data)
+    return jsonify(load_json('notes.json'))
 
 @app.route('/api/quiz')
 def get_quiz():
-    data = load_json('quiz.json')
-    return jsonify(data)
+    return jsonify(load_json('quiz.json'))
 
 @app.route('/api/videos')
 def get_videos():
-    data = load_json('videos.json')
-    return jsonify(data)
+    return jsonify(load_json('videos.json'))
 
 @app.route('/api/notifications')
 def get_notifications():
-    data = load_json('notifications.json')
-    return jsonify(data)
+    return jsonify(load_json('notifications.json'))
 
-# ─── JSON DIRECT ROUTES (IMPORTANT FIX 🔥) ────────────────
+# ─── JSON DIRECT ROUTES ──────────────────────────────────
 
 @app.route('/data/notes.json')
 def serve_notes_json():
@@ -96,7 +124,7 @@ def serve_quiz_json():
 def serve_notifications_json():
     return jsonify(load_json('notifications.json'))
 
-# ─── RUN APP (ALWAYS LAST) ───────────────────────────────
+# ─── RUN APP ─────────────────────────────────────────────
 
 if __name__ == "__main__":
     print("🚀 GovPrep running...")
