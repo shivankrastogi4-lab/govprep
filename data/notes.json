@@ -1,118 +1,37 @@
 {
   "notes": [
     {
-      "subject": "GK",
-      "topic": "Daily Current Affairs",
-      "difficulty": "Easy",
-      "content": "Daily Current Affairs Updated"
-    },
-    {
       "subject": "Reasoning",
-      "topic": "Coding Decoding",
-      "difficulty": "Medium",
-      "content": "Pattern-based logic questions"
-    },
-    {
-      "subject": "Reasoning",
-      "topic": "Blood Relation",
-      "difficulty": "Medium",
-      "content": "Family tree problems"
-    },
-    {
-      "subject": "Reasoning",
-      "topic": "Direction Test",
-      "difficulty": "Easy",
-      "content": "Left-right orientation"
-    },
-    {
-      "subject": "Reasoning",
-      "topic": "Syllogism",
-      "difficulty": "Medium",
-      "content": "Logical Venn diagram problems"
-    },
-    {
-      "subject": "Reasoning",
-      "topic": "Seating Arrangement",
+      "topic": "Coding Decoding Advanced",
       "difficulty": "Hard",
-      "content": "Puzzle solving tricks"
+      "overview": "Advanced tricks",
+      "key_points": [
+        "Use pattern recognition",
+        "Check letter shifts",
+        "Practice mixed coding patterns"
+      ]
     },
     {
       "subject": "Quant",
       "topic": "Percentage",
       "difficulty": "Easy",
-      "content": "Basic formula and tricks"
-    },
-    {
-      "subject": "Quant",
-      "topic": "Profit & Loss",
-      "difficulty": "Medium",
-      "content": "CP/SP formulas"
-    },
-    {
-      "subject": "Quant",
-      "topic": "Time & Work",
-      "difficulty": "Medium",
-      "content": "Work efficiency concept"
-    },
-    {
-      "subject": "Quant",
-      "topic": "Simple Interest",
-      "difficulty": "Easy",
-      "content": "SI = (P×R×T)/100"
-    },
-    {
-      "subject": "Quant",
-      "topic": "Speed Distance",
-      "difficulty": "Easy",
-      "content": "Distance = Speed × Time"
+      "overview": "Basic formula and tricks",
+      "key_points": [
+        "Percentage = (value/total)*100",
+        "Use shortcut fractions",
+        "Practice quick calculations"
+      ]
     },
     {
       "subject": "English",
       "topic": "Tense Rules",
       "difficulty": "Easy",
-      "content": "Present, Past, Future"
-    },
-    {
-      "subject": "English",
-      "topic": "Articles",
-      "difficulty": "Easy",
-      "content": "A, An, The usage"
-    },
-    {
-      "subject": "English",
-      "topic": "Prepositions",
-      "difficulty": "Medium",
-      "content": "In, On, At rules"
-    },
-    {
-      "subject": "English",
-      "topic": "Active Passive Voice",
-      "difficulty": "Medium",
-      "content": "Basics of voice change"
-    },
-    {
-      "subject": "English",
-      "topic": "Synonyms & Antonyms",
-      "difficulty": "Medium",
-      "content": "Vocabulary tricks"
-    },
-    {
-      "subject": "Reasoning",
-      "topic": "Coding Decoding Advanced",
-      "difficulty": "Hard",
-      "content": "Advanced tricks"
-    },
-    {
-      "subject": "Quant",
-      "topic": "Percentage Advanced",
-      "difficulty": "Medium",
-      "content": "Advanced formulas"
-    },
-    {
-      "subject": "English",
-      "topic": "Tense Advanced",
-      "difficulty": "Medium",
-      "content": "Advanced tense rules"
+      "overview": "Present, Past, Future",
+      "key_points": [
+        "Identify time of action",
+        "Use correct verb form",
+        "Practice sentence conversion"
+      ]
     }
   ]
 }
