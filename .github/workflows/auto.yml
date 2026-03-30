@@ -2,7 +2,7 @@ name: Auto Update System
 
 on:
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '30 0 * * *'   # Daily 6 AM India
   workflow_dispatch:
 
 jobs:
@@ -23,9 +23,9 @@ jobs:
 
     - name: Run scripts
       run: |
-        python backend/auto_update.py
-        python backend/auto_quiz.py
-        python backend/auto_notes.py
+        python govprep/backend/auto_update.py
+        python govprep/backend/auto_quiz.py
+        python govprep/backend/auto_notes.py
 
     - name: Commit changes
       run: |
