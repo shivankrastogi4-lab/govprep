@@ -2,6 +2,30 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Bastar close to being considered Naxal-free, possibility of revival extremely remote: IGP",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala Assembly Elections 2026: Election officials plan ‘halwa campaign’ to welcome first-time voters",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala Assembly Elections 2026: Pinarayi signals willingness to accept Satheesan’s challenge for a one-to-one debate on LDF governance",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala Assembly Elections 2026: At central Travancore rally, Rahul promises to raise rubber price to ₹250",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai",
       "source": "News",
       "time": "Today"
@@ -275,18 +299,6 @@
       "title": "IBPS PO 2025 Notification expected in August — 4000+ vacancies",
       "source": "IBPS Official",
       "time": "5 days ago"
-    },
-    {
-      "category": "Railways",
-      "title": "RRB NTPC Phase 7 CBT 1 Admit Card Released — Download Now",
-      "source": "Railway Recruitment Board",
-      "time": "1 week ago"
-    },
-    {
-      "category": "UPSC",
-      "title": "UPSC CSE 2025 Prelims Scheduled for June 1, 2025 — 1056 vacancies",
-      "source": "UPSC Official",
-      "time": "1 week ago"
     }
   ]
 }
