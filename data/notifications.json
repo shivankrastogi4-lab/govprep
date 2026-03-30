@@ -2,6 +2,24 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Opposition walk out protesting BJP MP’s allegation of ‘misuse’ of OBC quotas",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Delhi Police arrest Lashkar-e-Taiba operative",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Transgender Amendment Bill gets President Murmu’s assent",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Shielding ‘choice’ from ‘honour’",
       "source": "News",
       "time": "Today"
@@ -280,24 +298,6 @@
       "category": "Daily CA",
       "title": "Mediation key to reducing court cases, ensuring timely justice says judge",
       "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Govt. working to make budget more accessible for public, says Minister",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Telangana’s Bill for parents to get 15% salary or ₹10,000 from govt and pvt employed children, if application is filed",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "SSC",
-      "title": "Test Notif",
-      "source": "Test",
       "time": "Today"
     }
   ]
