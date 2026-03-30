@@ -33,10 +33,15 @@ jobs:
           python backend/auto_quiz.py
           python backend/auto_notes.py
 
-      - name: Commit changes
+      - name: Commit & Push changes
         run: |
           git config --global user.name "auto-bot"
           git config --global user.email "bot@example.com"
+
           git add .
+
           git commit -m "Auto update content" || echo "No changes"
+
+          git pull origin main --rebase || echo "No pull needed"
+
           git push origin main
