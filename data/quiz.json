@@ -1,6 +1,71 @@
 {
   "daily": [
     {
+      "id": 1774891786,
+      "subject": "Current Affairs",
+      "question": "Which of the following is a recent news headline?",
+      "options": [
+        "Woman ends life in Balapur after boyfriend refuses to marry her",
+        "New education reform introduced",
+        "International summit held",
+        "India launches new scheme"
+      ],
+      "answer": 0,
+      "explanation": "Woman ends life in Balapur after boyfriend refuses to marry her"
+    },
+    {
+      "id": 1774891787,
+      "subject": "Current Affairs",
+      "question": "Which of the following is a recent news headline?",
+      "options": [
+        "Government announces policy",
+        "State govt. partners with Central agencies to provide energy-efficient appliances to five lakh PMAY beneficiaries",
+        "New education reform introduced",
+        "India launches new scheme"
+      ],
+      "answer": 1,
+      "explanation": "State govt. partners with Central agencies to provide energy-efficient appliances to five lakh PMAY beneficiaries"
+    },
+    {
+      "id": 1774891788,
+      "subject": "Current Affairs",
+      "question": "Which of the following is a recent news headline?",
+      "options": [
+        "New education reform introduced",
+        "India launches new scheme",
+        "International summit held",
+        "Evading notice under BNSS can constitute valid grounds for arrest: Karnataka High Court"
+      ],
+      "answer": 3,
+      "explanation": "Evading notice under BNSS can constitute valid grounds for arrest: Karnataka High Court"
+    },
+    {
+      "id": 1774891789,
+      "subject": "Current Affairs",
+      "question": "Which of the following is a recent news headline?",
+      "options": [
+        "Kerala Assembly polls 2026: Preparations underway to ensure flawless surveillance of sensitive booths in Kozhikode",
+        "International summit held",
+        "New education reform introduced",
+        "Government announces policy"
+      ],
+      "answer": 0,
+      "explanation": "Kerala Assembly polls 2026: Preparations underway to ensure flawless surveillance of sensitive booths in Kozhikode"
+    },
+    {
+      "id": 1774891790,
+      "subject": "Current Affairs",
+      "question": "Which of the following is a recent news headline?",
+      "options": [
+        "Government announces policy",
+        "New education reform introduced",
+        "Why does the US have Iran's Kharg Island in its sights?",
+        "International summit held"
+      ],
+      "answer": 2,
+      "explanation": "Why does the US have Iran's Kharg Island in its sights?"
+    },
+    {
       "id": 1,
       "subject": "General Awareness",
       "question": "Who is the current Governor of the Reserve Bank of India (as of 2024)?",
