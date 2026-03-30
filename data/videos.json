@@ -1,0 +1,58 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "SSC CGL 2024 Complete Roadmap | How to Crack in 6 Months",
+      "channel": "Study IQ Education",
+      "youtube_id": "iLkbDDKoKpA",
+      "category": "SSC",
+      "duration": "45:20",
+      "thumbnail": "https://img.youtube.com/vi/iLkbDDKoKpA/hqdefault.jpg"
+    },
+    {
+      "id": 2,
+      "title": "IBPS PO 2024 Preparation Strategy | Banking Exam Tips",
+      "channel": "Adda247",
+      "youtube_id": "L9oNLfcULqY",
+      "category": "Banking",
+      "duration": "38:15",
+      "thumbnail": "https://img.youtube.com/vi/L9oNLfcULqY/hqdefault.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Reasoning Tricks for SSC & Bank Exams | Shortcut Methods",
+      "channel": "Unacademy",
+      "youtube_id": "TnrQ_MqgFcE",
+      "category": "Reasoning",
+      "duration": "52:00",
+      "thumbnail": "https://img.youtube.com/vi/TnrQ_MqgFcE/hqdefault.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Quantitative Aptitude Shortcuts | Percentage, Profit & Loss",
+      "channel": "Wifistudy",
+      "youtube_id": "p7nGcY73Ah8",
+      "category": "Quant",
+      "duration": "1:10:00",
+      "thumbnail": "https://img.youtube.com/vi/p7nGcY73Ah8/hqdefault.jpg"
+    },
+    {
+      "id": 5,
+      "title": "English Grammar for Competitive Exams | Error Spotting",
+      "channel": "Bankers Adda",
+      "youtube_id": "9bZkp7q19f0",
+      "category": "English",
+      "duration": "41:30",
+      "thumbnail": "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Current Affairs January 2025 | Monthly Compilation",
+      "channel": "GK Today",
+      "youtube_id": "wIGnvBnIaMg",
+      "category": "GK",
+      "duration": "29:45",
+      "thumbnail": "https://img.youtube.com/vi/wIGnvBnIaMg/hqdefault.jpg"
+    }
+  ]
+}

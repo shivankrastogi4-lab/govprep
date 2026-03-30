@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block page_id %}home{% endblock %}
+
+{% block content %}
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" style="position:relative;overflow:hidden">
+  <div class="hero-bg" style="pointer-events:none;position:absolute;inset:0;z-index:0"></div>
+  <div class="hero-grid-lines" style="pointer-events:none;position:absolute;inset:0;z-index:0"></div>
+
+  <div class="container" style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;padding-top:40px;padding-bottom:40px">
+    <div class="hero-content">
+      <div class="hero-eyebrow">India's Smartest Exam Prep Platform</div>
+      <h1>
+        Crack Your<br>
+        <span class="highlight">Government Exam</span><br>
+        This Year.
+      </h1>
+      <p class="hero-desc">
+        Free notes, daily quizzes, and proven strategies for SSC, Banking, Railways, and State Exams. No subscription. No login.
+      </p>
+      <div class="hero-cta">
+        <a href="/quiz" class="btn btn-primary">🧠 Take Today's Quiz</a>
+        <a href="/exams" class="btn btn-outline">Browse Exams →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Exam Categories</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Study Notes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Free Forever</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" style="position:relative;height:380px">
+      <div class="hero-circle">
+        <div style="font-size:3.5rem">🏛️</div>
+        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:0.9rem;margin-top:8px;color:var(--accent)">GOVT PREP</div>
+      </div>
+      <div class="hero-float-card" style="top:5%;right:0">
+        <div class="float-card-title">Today's Quiz</div>
+        <div class="float-card-val">10 Qs</div>
+        <div class="float-card-sub">Ready to attempt →</div>
+      </div>
+      <div class="hero-float-card" style="top:42%;right:-20px">
+        <div class="float-card-title">Latest Exam</div>
+        <div class="float-card-val">SSC CGL</div>
+        <div class="float-card-sub">7500+ vacancies</div>
+      </div>
+      <div class="hero-float-card" style="bottom:8%;right:10px">
+        <div class="float-card-title">🔥 Streak</div>
+        <div class="float-card-val" id="heroStreak">—</div>
+        <div class="float-card-sub">days in a row</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LATEST UPDATES ═══ -->
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📢 Updates</div>
+        <h2 class="section-title">Latest Exam Notifications</h2>
+      </div>
+      <a href="/exams" class="see-all">View all →</a>
+    </div>
+    <div class="updates-list">
+      <div class="update-item">
+        <div class="update-dot"></div>
+        <div class="update-content">
+          <div class="update-title">SSC CGL 2024 Final Result Announced — Check on ssc.gov.in</div>
+          <div class="update-meta">Staff Selection Commission • 2 days ago</div>
+        </div>
+        <span class="tag tag-red">SSC</span>
+      </div>
+      <div class="update-item">
+        <div class="update-dot" style="background:var(--accent4)"></div>
+        <div class="update-content">
+          <div class="update-title">IBPS PO 2025 Notification expected in August — 4000+ vacancies</div>
+          <div class="update-meta">IBPS Official • 5 days ago</div>
+        </div>
+        <span class="tag tag-blue">Banking</span>
+      </div>
+      <div class="update-item">
+        <div class="update-dot" style="background:var(--accent3)"></div>
+        <div class="update-content">
+          <div class="update-title">RRB NTPC Phase 7 CBT 1 Admit Card Released — Download Now</div>
+          <div class="update-meta">Railway Recruitment Board • 1 week ago</div>
+        </div>
+        <span class="tag tag-green">Railways</span>
+      </div>
+      <div class="update-item">
+        <div class="update-dot" style="background:#c084fc"></div>
+        <div class="update-content">
+          <div class="update-title">UPSC CSE 2025 Prelims Scheduled for June 1, 2025 — 1056 vacancies</div>
+          <div class="update-meta">UPSC Official • 1 week ago</div>
+        </div>
+        <span class="tag tag-purple">UPSC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED EXAMS ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">🎯 Exams</div>
+        <h2 class="section-title">Featured Exams</h2>
+        <p class="section-subtitle">Pick your target and start preparing today</p>
+      </div>
+      <a href="/exams" class="see-all">All Exams →</a>
+    </div>
+    <div class="exams-grid">
+      {% for exam_id, exam in exams.items() %}
+      <div class="exam-card" style="--exam-color:{{ exam.color }}">
+        <div class="exam-card-top">
+          <div class="exam-icon">{{ exam.icon }}</div>
+          <div class="exam-name">{{ exam.name }}</div>
+          <div class="exam-full">{{ exam.full_name }}</div>
+        </div>
+        <div class="exam-card-body">
+          <div class="exam-meta">
+            <div class="meta-item">
+              <div class="meta-label">Vacancies</div>
+              <div class="meta-value">{{ exam.vacancy_approx }}</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Category</div>
+              <div class="meta-value">{{ exam.category }}</div>
+            </div>
+            <div class="meta-item" style="grid-column:1/-1">
+              <div class="meta-label">Pay Scale</div>
+              <div class="meta-value" style="font-size:0.78rem">{{ exam.salary }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="exam-card-footer">
+          <a href="/exam/{{ exam_id }}" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">View Details</a>
+          <a href="/notes" class="btn btn-ghost btn-sm">Study</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DAILY QUIZ CTA ═══ -->
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto;padding:40px 0">
+      <div style="font-size:3rem;margin-bottom:16px">🧠</div>
+      <h2 style="font-size:2rem;margin-bottom:12px">Daily Quiz Challenge</h2>
+      <p style="color:var(--text2);margin-bottom:32px;line-height:1.7">
+        10 questions across all subjects — Reasoning, Quant, English & GK. Test yourself daily to build momentum and track your progress.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/quiz" class="btn btn-primary" style="font-size:1rem;padding:14px 32px">Start Today's Quiz →</a>
+        <a href="/progress" class="btn btn-outline">View My Progress</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SUBJECTS / NOTES ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📚 Study Material</div>
+        <h2 class="section-title">Study by Subject</h2>
+      </div>
+      <a href="/notes" class="see-all">All Notes →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px">
+      <a href="/notes?subject=Reasoning" class="card" style="padding:24px;display:flex;gap:16px;align-items:center">
+        <div style="font-size:2rem">🧩</div>
+        <div>
+          <div style="font-weight:800;margin-bottom:4px">Reasoning</div>
+          <div style="font-size:0.8rem;color:var(--text3)">Syllogism, Blood Relations, Series...</div>
+        </div>
+      </a>
+      <a href="/notes?subject=Quantitative+Aptitude" class="card" style="padding:24px;display:flex;gap:16px;align-items:center">
+        <div style="font-size:2rem">🔢</div>
+        <div>
+          <div style="font-weight:800;margin-bottom:4px">Quantitative</div>
+          <div style="font-size:0.8rem;color:var(--text3)">Percentage, SI/CI, Speed...</div>
+        </div>
+      </a>
+      <a href="/notes?subject=English" class="card" style="padding:24px;display:flex;gap:16px;align-items:center">
+        <div style="font-size:2rem">📝</div>
+        <div>
+          <div style="font-weight:800;margin-bottom:4px">English</div>
+          <div style="font-size:0.8rem;color:var(--text3)">Grammar, Vocabulary, RC...</div>
+        </div>
+      </a>
+      <a href="/notes?subject=General+Awareness" class="card" style="padding:24px;display:flex;gap:16px;align-items:center">
+        <div style="font-size:2rem">🌏</div>
+        <div>
+          <div style="font-weight:800;margin-bottom:4px">General Awareness</div>
+          <div style="font-size:0.8rem;color:var(--text3)">Constitution, Banking, Current Affairs...</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const data = JSON.parse(localStorage.getItem('govprep_progress') || '{"streak":0}');
+  const el = document.getElementById('heroStreak');
+  if (el) el.textContent = (data.streak || 0) + ' 🔥';
+</script>
+{% endblock %}

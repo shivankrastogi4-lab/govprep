@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}{{ exam.name }}{% endblock %}
+{% block page_id %}exam-detail{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<div class="exam-detail-hero" style="--exam-color:{{ exam.color }}">
+  <div class="container">
+    <div style="display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+          <a href="/exams" style="font-size:0.8rem;color:var(--text3)">← All Exams</a>
+          <span style="color:var(--border2)">|</span>
+          <span class="tag tag-blue">{{ exam.category }}</span>
+        </div>
+        <div style="font-size:3rem;margin-bottom:12px">{{ exam.icon }}</div>
+        <h1 style="font-size:2.2rem;margin-bottom:6px">{{ exam.name }}</h1>
+        <p style="color:var(--text2);font-size:0.95rem;max-width:500px;line-height:1.6">{{ exam.full_name }}</p>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;min-width:160px">
+          <div class="meta-label">Vacancies</div>
+          <div style="font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent);margin-top:4px">{{ exam.vacancy_approx }}</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;min-width:160px">
+          <div class="meta-label">Pay Scale</div>
+          <div style="font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;color:var(--accent3);margin-top:4px">{{ exam.salary }}</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;min-width:200px">
+          <div class="meta-label">Eligibility</div>
+          <div style="font-size:0.85rem;font-weight:600;margin-top:4px">{{ exam.eligibility }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs Nav -->
+<div style="border-bottom:1px solid var(--border);position:sticky;top:var(--nav-h);z-index:50;background:var(--bg);backdrop-filter:blur(10px)">
+  <div class="container">
+    <div style="display:flex;gap:4px;overflow-x:auto;padding:8px 0">
+      <button class="filter-tab active" onclick="showTab('syllabus',this)">📗 Syllabus</button>
+      <button class="filter-tab" onclick="showTab('pattern',this)">📊 Exam Pattern</button>
+      <button class="filter-tab" onclick="showTab('strategy',this)">🎯 Strategy</button>
+      <button class="filter-tab" onclick="showTab('pyq',this)">📄 Prev. Questions</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Syllabus Tab -->
+  <div id="tab-syllabus" class="tab-content section">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Curriculum</div>
+        <h2 class="section-title">Detailed Syllabus</h2>
+      </div>
+    </div>
+    <div class="syllabus-grid">
+      {% for stage, topics in exam.syllabus.items() %}
+      <div class="syllabus-section">
+        <div class="syllabus-title">{{ stage }}</div>
+        <ul class="syllabus-list">
+          {% for topic in topics %}
+          <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Pattern Tab -->
+  <div id="tab-pattern" class="tab-content section" style="display:none">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Structure</div>
+        <h2 class="section-title">Exam Pattern</h2>
+      </div>
+    </div>
+    <div class="pattern-table-wrap" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+      <table class="pattern-table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Questions</th>
+            <th>Marks</th>
+            <th>Duration</th>
+            <th>Negative Marking</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for stage, info in exam.exam_pattern.items() %}
+          <tr>
+            <td><strong>{{ stage }}</strong></td>
+            <td>{{ info.questions }}</td>
+            <td>{{ info.marks }}</td>
+            <td>{{ info.time }}</td>
+            <td>{% if info.negative == 'None' %}<span class="tag tag-green">None</span>{% else %}<span class="tag tag-red">-{{ info.negative }}</span>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:24px;background:rgba(244,162,97,0.07);border:1px solid rgba(244,162,97,0.2);border-radius:var(--radius);padding:16px 20px">
+      <strong style="color:var(--accent)">⚠️ Note:</strong>
+      <span style="color:var(--text2);font-size:0.9rem;margin-left:8px">Negative marking deducts marks for wrong answers. Attempting uncertain questions may lower your overall score. Strategic skipping is recommended.</span>
+    </div>
+  </div>
+
+  <!-- Strategy Tab -->
+  <div id="tab-strategy" class="tab-content section" style="display:none">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Preparation</div>
+        <h2 class="section-title">How to Prepare</h2>
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px">
+      <ul class="strategy-list">
+        {% for tip in exam.strategy %}
+        <li>
+          <div class="strategy-num">{{ loop.index }}</div>
+          <div class="strategy-text">{{ tip }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px">
+      <a href="/notes" class="card" style="padding:20px;display:flex;gap:14px;align-items:center">
+        <div style="font-size:1.8rem">📚</div>
+        <div>
+          <div style="font-weight:700;margin-bottom:2px">Study Notes</div>
+          <div style="font-size:0.78rem;color:var(--text3)">Topic-wise notes →</div>
+        </div>
+      </a>
+      <a href="/quiz" class="card" style="padding:20px;display:flex;gap:14px;align-items:center">
+        <div style="font-size:1.8rem">🧠</div>
+        <div>
+          <div style="font-weight:700;margin-bottom:2px">Daily Quiz</div>
+          <div style="font-size:0.78rem;color:var(--text3)">Practice daily →</div>
+        </div>
+      </a>
+      <a href="/videos" class="card" style="padding:20px;display:flex;gap:14px;align-items:center">
+        <div style="font-size:1.8rem">📺</div>
+        <div>
+          <div style="font-weight:700;margin-bottom:2px">Video Lectures</div>
+          <div style="font-size:0.78rem;color:var(--text3)">Watch & learn →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- PYQ Tab -->
+  <div id="tab-pyq" class="tab-content section" style="display:none">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Practice</div>
+        <h2 class="section-title">Previous Year Questions</h2>
+        <p class="section-subtitle">Click an option to check your answer</p>
+      </div>
+    </div>
+
+    {% for pyq in exam.previous_questions %}
+    <div class="pyq-card" data-answer="{{ pyq.answer }}">
+      <div class="pyq-meta">
+        <span class="pyq-year">{{ pyq.year }}</span>
+        <span class="tag tag-blue" style="font-size:0.68rem">{{ exam.name }}</span>
+      </div>
+      <div class="pyq-question">{{ loop.index }}. {{ pyq.q }}</div>
+      <div class="pyq-options">
+        {% for opt in pyq.options %}
+        <button class="pyq-option">{{ ['(A)', '(B)', '(C)', '(D)'][loop.index0] }} {{ opt }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div style="text-align:center;margin-top:32px;padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg)">
+      <div style="font-size:1.5rem;margin-bottom:10px">🎯</div>
+      <p style="color:var(--text2);margin-bottom:16px">Want more practice questions? Take our Daily Quiz!</p>
+      <a href="/quiz" class="btn btn-primary">Go to Daily Quiz →</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function showTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).style.display = 'block';
+  btn.classList.add('active');
+}
+</script>
+{% endblock %}

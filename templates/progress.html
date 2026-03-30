@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block title %}My Progress{% endblock %}
+{% block page_id %}progress{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📊 Dashboard</div>
+        <h1 class="section-title">My Progress</h1>
+        <p class="section-subtitle">Your quiz performance and study streak — stored locally, no account needed</p>
+      </div>
+      <button onclick="Tracker.clear()" class="btn btn-outline btn-sm" style="color:var(--red);border-color:rgba(230,57,70,0.3)">🗑️ Reset Progress</button>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="tracker-grid">
+      <div class="tracker-stat">
+        <div class="value" id="stat-quizzes">0</div>
+        <div class="label">Quizzes Attempted</div>
+      </div>
+      <div class="tracker-stat">
+        <div class="value" id="stat-avg" style="color:var(--accent3)">0%</div>
+        <div class="label">Average Score</div>
+      </div>
+      <div class="tracker-stat">
+        <div class="value" id="stat-total-score" style="color:var(--accent-blue)">0</div>
+        <div class="label">Total Correct Answers</div>
+      </div>
+      <div class="tracker-stat">
+        <div style="font-size:2rem;line-height:1;font-family:'Sora',sans-serif;font-weight:800;color:var(--yellow)" id="stat-streak">0 🔥</div>
+        <div class="label">Daily Streak</div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:32px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-weight:700">Overall Performance</div>
+        <div id="avgPct" style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent)">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progFill" style="width:0%"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:0.72rem;color:var(--text3)">
+        <span>0%</span>
+        <span>Target: 70%</span>
+        <span>100%</span>
+      </div>
+    </div>
+
+    <!-- Target line -->
+    <div style="position:relative;margin-bottom:32px">
+    </div>
+
+    <!-- Quiz History -->
+    <div>
+      <h2 style="font-size:1.2rem;margin-bottom:16px">Quiz History</h2>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Score</th>
+              <th>Percentage</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <tr>
+              <td colspan="4" style="text-align:center;color:var(--text3);padding:32px">
+                No quizzes attempted yet.
+                <a href="/quiz" style="color:var(--accent);margin-left:4px">Take your first quiz →</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recommended Actions -->
+    <div style="margin-top:48px">
+      <h2 style="font-size:1.2rem;margin-bottom:20px">Recommended Next Steps</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px">
+        <a href="/quiz" class="card" style="padding:20px;display:flex;gap:16px;align-items:center">
+          <div style="font-size:2rem">🧠</div>
+          <div>
+            <div style="font-weight:700;margin-bottom:4px">Today's Quiz</div>
+            <div style="font-size:0.8rem;color:var(--text3)">Maintain your streak →</div>
+          </div>
+        </a>
+        <a href="/notes" class="card" style="padding:20px;display:flex;gap:16px;align-items:center">
+          <div style="font-size:2rem">📚</div>
+          <div>
+            <div style="font-weight:700;margin-bottom:4px">Review Weak Areas</div>
+            <div style="font-size:0.8rem;color:var(--text3)">Browse study notes →</div>
+          </div>
+        </a>
+        <a href="/videos" class="card" style="padding:20px;display:flex;gap:16px;align-items:center">
+          <div style="font-size:2rem">📺</div>
+          <div>
+            <div style="font-weight:700;margin-bottom:4px">Watch a Lecture</div>
+            <div style="font-size:0.8rem;color:var(--text3)">Learn from experts →</div>
+          </div>
+        </a>
+        <a href="/exams" class="card" style="padding:20px;display:flex;gap:16px;align-items:center">
+          <div style="font-size:2rem">🎯</div>
+          <div>
+            <div style="font-weight:700;margin-bottom:4px">Explore Exams</div>
+            <div style="font-size:0.8rem;color:var(--text3)">Syllabus & strategy →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- localStorage notice -->
+    <div style="margin-top:40px;padding:16px 20px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.82rem;color:var(--text3)">
+      🔒 <strong style="color:var(--text2)">Privacy:</strong> All progress is stored only in your browser's local storage. No data is sent to any server. Clearing your browser cache will reset progress.
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Enhance progress bar after render
+document.addEventListener('DOMContentLoaded', () => {
+  const data = JSON.parse(localStorage.getItem('govprep_progress') || '{"quizzes":[],"totalScore":0,"totalQs":0}');
+  const avg = data.totalQs > 0 ? Math.round((data.totalScore / data.totalQs) * 100) : 0;
+  const fill = document.getElementById('progFill');
+  const pct = document.getElementById('avgPct');
+  if (fill) setTimeout(() => fill.style.width = avg + '%', 100);
+  if (pct) pct.textContent = avg + '%';
+});
+</script>
+{% endblock %}

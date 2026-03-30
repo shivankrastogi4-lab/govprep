@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Video Lectures{% endblock %}
+{% block page_id %}videos{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📺 Learning Hub</div>
+        <h1 class="section-title">Video Lectures</h1>
+        <p class="section-subtitle">Curated YouTube videos from top educators for government exam preparation</p>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div style="margin-bottom:28px">
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="Videos.load('All');setActive(this)">All</button>
+        <button class="filter-tab" onclick="Videos.load('SSC');setActive(this)">SSC</button>
+        <button class="filter-tab" onclick="Videos.load('Banking');setActive(this)">Banking</button>
+        <button class="filter-tab" onclick="Videos.load('Reasoning');setActive(this)">Reasoning</button>
+        <button class="filter-tab" onclick="Videos.load('Quant');setActive(this)">Quant</button>
+        <button class="filter-tab" onclick="Videos.load('English');setActive(this)">English</button>
+        <button class="filter-tab" onclick="Videos.load('GK');setActive(this)">GK</button>
+      </div>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="videos-grid" id="videosGrid">
+      <div class="loading"><div class="spinner"></div> Loading videos...</div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div style="margin-top:48px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;font-size:0.82rem;color:var(--text3)">
+      📌 <strong style="color:var(--text2)">Note:</strong> All videos are hosted on YouTube and are the property of their respective creators. GovPrep.in does not own any of the video content.
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function setActive(btn) {
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+{% endblock %}

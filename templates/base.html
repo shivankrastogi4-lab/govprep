@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GovPrep India - Your complete preparation hub for SSC, Banking, Railways and State government exams.">
+  <title>{% block title %}GovPrep India{% endblock %} | Government Exam Prep</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <style>
+    /* ── Navbar click fix ── */
+    .navbar { position: fixed !important; z-index: 9999 !important; }
+    .nav-links, .nav-links li, .nav-links a { pointer-events: all !important; position: relative; z-index: 9999 !important; }
+    .hero-bg, .hero-grid-lines { pointer-events: none !important; }
+    .mobile-nav { z-index: 9998 !important; }
+  </style>
+</head>
+<body data-page="{% block page_id %}home{% endblock %}">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="/" class="nav-logo">
+    <span>🏛️</span>
+    <span>GovPrep<span style="color:var(--accent)">.</span>in</span>
+    <span class="logo-badge">BETA</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="/" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li>
+    <li><a href="/exams" {% if '/exam' in request.path %}class="active"{% endif %}>Exams</a></li>
+    <li><a href="/notes" {% if request.path == '/notes' %}class="active"{% endif %}>Notes</a></li>
+    <li><a href="/quiz" {% if request.path == '/quiz' %}class="active"{% endif %}>Daily Quiz</a></li>
+    <li><a href="/videos" {% if request.path == '/videos' %}class="active"{% endif %}>Videos</a></li>
+    <li><a href="/progress" {% if request.path == '/progress' %}class="active"{% endif %}>Progress</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeBtn" title="Toggle theme">☀️</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="/" {% if request.path == '/' %}class="active"{% endif %}>🏠 Home</a>
+  <a href="/exams" {% if '/exam' in request.path %}class="active"{% endif %}>📋 Exams</a>
+  <a href="/notes" {% if request.path == '/notes' %}class="active"{% endif %}>📚 Notes</a>
+  <a href="/quiz" {% if request.path == '/quiz' %}class="active"{% endif %}>🧠 Daily Quiz</a>
+  <a href="/videos" {% if request.path == '/videos' %}class="active"{% endif %}>📺 Videos</a>
+  <a href="/progress" {% if request.path == '/progress' %}class="active"{% endif %}>📊 Progress</a>
+</div>
+
+<!-- Main Content -->
+<main class="page">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">🏛️ GovPrep.in</div>
+        <p class="footer-desc">Your complete preparation hub for Indian government exams. Free resources, daily quizzes, and expert notes.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Exams</h5>
+        <ul class="footer-links">
+          <li><a href="/exam/ssc">SSC CGL</a></li>
+          <li><a href="/exam/ibps_po">IBPS PO</a></li>
+          <li><a href="/exam/rrb_ntpc">RRB NTPC</a></li>
+          <li><a href="/exam/upsc_cse">UPSC CSE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Study</h5>
+        <ul class="footer-links">
+          <li><a href="/notes">All Notes</a></li>
+          <li><a href="/quiz">Daily Quiz</a></li>
+          <li><a href="/videos">Videos</a></li>
+          <li><a href="/progress">Progress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Subjects</h5>
+        <ul class="footer-links">
+          <li><a href="/notes?subject=Reasoning">Reasoning</a></li>
+          <li><a href="/notes?subject=Quantitative+Aptitude">Quantitative</a></li>
+          <li><a href="/notes?subject=English">English</a></li>
+          <li><a href="/notes?subject=General+Awareness">GK</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 GovPrep India. Built for aspirants, by aspirants. 🇮🇳</div>
+      <div>Free forever • No ads • No login required</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Global Modals -->
+<div class="modal-overlay" id="noteModal"></div>
+<div class="modal-overlay" id="videoModal"></div>
+
+<script src="/static/js/app.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

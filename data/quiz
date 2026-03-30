@@ -1,0 +1,39 @@
+{
+  "id": 11,
+  "subject": "General Awareness",
+  "question": "Who is the President of India as of 2024?",
+  "options": ["Ram Nath Kovind", "Droupadi Murmu", "Pratibha Patil", "APJ Abdul Kalam"],
+  "answer": 1,
+  "explanation": "Droupadi Murmu became the 15th President of India in July 2022."
+}
+"ssc_chsl": {
+  "id": "ssc_chsl",
+  "name": "SSC CHSL",
+  "full_name": "Staff Selection Commission Combined Higher Secondary Level",
+  "category": "SSC",
+  "icon": "📋",
+  "color": "#f4a261",
+  "vacancy_approx": "3500+",
+  "salary": "₹19,900 – ₹63,200",
+  "eligibility": "12th Pass from recognized board",
+  "syllabus": {
+    "Tier I": ["English Language", "General Intelligence", "Quantitative Aptitude", "General Awareness"],
+    "Tier II": ["Mathematical Abilities", "English Language & Comprehension", "General Awareness", "Computer Aptitude"]
+  },
+  "exam_pattern": {
+    "Tier I": {"questions": 100, "marks": 200, "time": "60 min", "negative": "0.5"},
+    "Tier II": {"questions": 100, "marks": 200, "time": "2 hrs", "negative": "1"}
+  },
+  "strategy": [
+    "Focus on Class 10-12 NCERT for basics",
+    "English grammar rules are heavily tested in CHSL"
+  ],
+  "previous_questions": [
+    {
+      "q": "What is the full form of LDC?",
+      "options": ["Lower Division Clerk", "Low Data Carrier", "Less Data Count", "Local Division Clerk"],
+      "answer": 0,
+      "year": "2023"
+    }
+  ]
+}

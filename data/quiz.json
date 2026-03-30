@@ -1,0 +1,184 @@
+{
+  "daily": [
+    {
+      "id": 1,
+      "subject": "General Awareness",
+      "question": "Who is the current Governor of the Reserve Bank of India (as of 2024)?",
+      "options": [
+        "Shaktikanta Das",
+        "Sanjay Malhotra",
+        "Urjit Patel",
+        "Raghuram Rajan"
+      ],
+      "answer": 1,
+      "explanation": "Sanjay Malhotra became the 26th Governor of RBI in December 2024, succeeding Shaktikanta Das."
+    },
+    {
+      "id": 2,
+      "subject": "Quantitative Aptitude",
+      "question": "A person buys an article for ₹800 and sells it for ₹1000. What is the profit percentage?",
+      "options": [
+        "20%",
+        "25%",
+        "15%",
+        "30%"
+      ],
+      "answer": 1,
+      "explanation": "Profit = 1000 - 800 = 200. Profit% = (200/800) × 100 = 25%"
+    },
+    {
+      "id": 3,
+      "subject": "Reasoning",
+      "question": "If CAT = 3-1-20, then DOG = ?",
+      "options": [
+        "4-15-7",
+        "4-14-7",
+        "3-15-7",
+        "4-15-8"
+      ],
+      "answer": 0,
+      "explanation": "Each letter is replaced by its position in the alphabet. D=4, O=15, G=7."
+    },
+    {
+      "id": 4,
+      "subject": "English",
+      "question": "Choose the synonym of 'Perspicacious':",
+      "options": [
+        "Dull",
+        "Shrewd",
+        "Timid",
+        "Lazy"
+      ],
+      "answer": 1,
+      "explanation": "Perspicacious means having a ready insight into things; shrewd."
+    },
+    {
+      "id": 5,
+      "subject": "General Awareness",
+      "question": "Which Indian state has the longest coastline?",
+      "options": [
+        "Tamil Nadu",
+        "Andhra Pradesh",
+        "Gujarat",
+        "Maharashtra"
+      ],
+      "answer": 2,
+      "explanation": "Gujarat has the longest coastline in India at approximately 1,600 km."
+    },
+    {
+      "id": 6,
+      "subject": "Quantitative Aptitude",
+      "question": "The simple interest on ₹5000 at 8% per annum for 3 years is:",
+      "options": [
+        "₹1200",
+        "₹1100",
+        "₹1000",
+        "₹1300"
+      ],
+      "answer": 0,
+      "explanation": "SI = (P × R × T) / 100 = (5000 × 8 × 3) / 100 = ₹1200"
+    },
+    {
+      "id": 7,
+      "subject": "Reasoning",
+      "question": "Find the odd one out: Mango, Orange, Apple, Carrot",
+      "options": [
+        "Mango",
+        "Orange",
+        "Apple",
+        "Carrot"
+      ],
+      "answer": 3,
+      "explanation": "Carrot is a vegetable while the rest are fruits."
+    },
+    {
+      "id": 8,
+      "subject": "General Awareness",
+      "question": "The Durand Cup is associated with which sport?",
+      "options": [
+        "Cricket",
+        "Hockey",
+        "Football",
+        "Badminton"
+      ],
+      "answer": 2,
+      "explanation": "The Durand Cup is one of the oldest football tournaments in Asia, held in India."
+    },
+    {
+      "id": 9,
+      "subject": "English",
+      "question": "Fill in the blank: She ______ to school every day.",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "answer": 1,
+      "explanation": "With third-person singular subjects (She/He/It), we use 'goes' in simple present tense."
+    },
+    {
+      "id": 10,
+      "subject": "Quantitative Aptitude",
+      "question": "What is the LCM of 12, 18, and 24?",
+      "options": [
+        "36",
+        "48",
+        "72",
+        "60"
+      ],
+      "answer": 2,
+      "explanation": "LCM of 12, 18, 24 = 72. (12=2²×3, 18=2×3², 24=2³×3 → LCM=2³×3²=72)"
+    }
+  ],
+  "leaderboard": [
+    {
+      "name": "Vikram T.",
+      "score": 10,
+      "total": 10,
+      "date": "2025-01-13"
+    },
+    {
+      "name": "Rahul S.",
+      "score": 9,
+      "total": 10,
+      "date": "2025-01-15"
+    },
+    {
+      "name": "Tester",
+      "score": 9,
+      "total": 10,
+      "date": "2026-03-30"
+    },
+    {
+      "name": "Amit K.",
+      "score": 8,
+      "total": 10,
+      "date": "2025-01-14"
+    },
+    {
+      "name": "Priya M.",
+      "score": 8,
+      "total": 10,
+      "date": "2025-01-15"
+    },
+    {
+      "name": "Test User",
+      "score": 8,
+      "total": 10,
+      "date": "2026-03-30"
+    },
+    {
+      "name": "Sneha R.",
+      "score": 7,
+      "total": 10,
+      "date": "2025-01-14"
+    },
+    {
+      "name": "Shivank",
+      "score": 5,
+      "total": 10,
+      "date": "2026-03-30"
+    }
+  ]
+}

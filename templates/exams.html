@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Exams{% endblock %}
+{% block page_id %}exams{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📋 All Exams</div>
+        <h1 class="section-title">Government Exam Hub</h1>
+        <p class="section-subtitle">Browse all major Indian government exams with syllabus, pattern & strategy</p>
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div style="margin-bottom:32px">
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterExams('All', this)">All</button>
+        <button class="filter-tab" onclick="filterExams('SSC', this)">🏛️ SSC</button>
+        <button class="filter-tab" onclick="filterExams('Banking', this)">🏦 Banking</button>
+        <button class="filter-tab" onclick="filterExams('Railways', this)">🚆 Railways</button>
+        <button class="filter-tab" onclick="filterExams('State Exams', this)">⚖️ State / UPSC</button>
+      </div>
+    </div>
+
+    <div class="exams-grid" id="examsGrid">
+      {% for exam_id, exam in exams.items() %}
+      <div class="exam-card" style="--exam-color:{{ exam.color }}" data-category="{{ exam.category }}">
+        <div class="exam-card-top">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+            <div class="exam-icon">{{ exam.icon }}</div>
+            <span class="tag tag-blue">{{ exam.category }}</span>
+          </div>
+          <div class="exam-name">{{ exam.name }}</div>
+          <div class="exam-full">{{ exam.full_name }}</div>
+        </div>
+        <div class="exam-card-body">
+          <div class="exam-meta">
+            <div class="meta-item">
+              <div class="meta-label">Vacancies</div>
+              <div class="meta-value">{{ exam.vacancy_approx }}</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Eligibility</div>
+              <div class="meta-value" style="font-size:0.78rem">{{ exam.eligibility[:30] }}...</div>
+            </div>
+            <div class="meta-item" style="grid-column:1/-1">
+              <div class="meta-label">Pay Scale</div>
+              <div class="meta-value" style="font-size:0.8rem">{{ exam.salary }}</div>
+            </div>
+          </div>
+          <div style="margin-top:4px">
+            <div class="meta-label" style="margin-bottom:8px">Syllabus Stages</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              {% for stage in exam.syllabus.keys() %}
+              <span class="tag tag-orange">{{ stage }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="exam-card-footer">
+          <a href="/exam/{{ exam_id }}" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">Full Details →</a>
+          <a href="/quiz" class="btn btn-ghost btn-sm">Quiz</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Info Banner -->
+    <div style="margin-top:48px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;text-align:center">
+      <div style="font-size:1.8rem;margin-bottom:12px">📬</div>
+      <h3 style="margin-bottom:8px">More exams being added</h3>
+      <p style="color:var(--text2);font-size:0.9rem">State PSC, UPSC CAPF, NDA, CDS, and more coming soon. Check back regularly!</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function filterExams(category, btn) {
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.exam-card').forEach(card => {
+    const show = category === 'All' || card.dataset.category === category;
+    card.style.display = show ? '' : 'none';
+  });
+}
+</script>
+{% endblock %}

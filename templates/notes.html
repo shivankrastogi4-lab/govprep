@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Study Notes{% endblock %}
+{% block page_id %}notes{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">📚 Study Material</div>
+        <h1 class="section-title">Study Notes</h1>
+        <p class="section-subtitle">Concise, exam-focused notes for all major topics</p>
+      </div>
+    </div>
+
+    <!-- Search + Filter Bar -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;align-items:flex-start">
+      <div class="search-box" style="flex:1;min-width:220px;max-width:400px">
+        <span class="icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search topics, keywords..." oninput="debounceSearch(this.value)">
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="Notes.load('All','');updateActive(this)">All</button>
+        <button class="filter-tab" onclick="Notes.load('Reasoning','');updateActive(this)">🧩 Reasoning</button>
+        <button class="filter-tab" onclick="Notes.load('Quantitative Aptitude','');updateActive(this)">🔢 Quant</button>
+        <button class="filter-tab" onclick="Notes.load('English','');updateActive(this)">📝 English</button>
+        <button class="filter-tab" onclick="Notes.load('General Awareness','');updateActive(this)">🌏 GK</button>
+      </div>
+    </div>
+
+    <!-- Notes Grid -->
+    <div class="notes-grid" id="notesGrid">
+      <div class="loading"><div class="spinner"></div> Loading notes...</div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function updateActive(btn) {
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+let searchTimeout;
+function debounceSearch(val) {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => {
+    Notes.load(Notes.current, val);
+  }, 300);
+}
+
+// Pre-load subject from URL
+const urlParams = new URLSearchParams(window.location.search);
+const subjectParam = urlParams.get('subject');
+if (subjectParam) {
+  document.addEventListener('DOMContentLoaded', () => {
+    Notes.load(subjectParam, '');
+    // activate correct filter
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+      if (btn.textContent.includes(subjectParam.split(' ')[0])) btn.classList.add('active');
+      else btn.classList.remove('active');
+    });
+  });
+}
+</script>
+{% endblock %}
