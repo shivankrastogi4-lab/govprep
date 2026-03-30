@@ -1,6 +1,81 @@
 {
-  "subjects": ["Reasoning", "Quantitative Aptitude", "English", "General Awareness"],
+  "subjects": [
+    "Reasoning",
+    "Quantitative Aptitude",
+    "English",
+    "General Awareness"
+  ],
   "notes": [
+    {
+      "id": 1774898892,
+      "subject": "Current Affairs",
+      "topic": "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai",
+      "difficulty": "Easy",
+      "content": "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
+      "key_points": [
+        "T.N. Assembly election: candidates to be announced soon, says Selvaperunthagai",
+        "यह करंट अफेयर्स से जुड़ा है",
+        "परीक्षा में पूछे जाने की संभावना है"
+      ],
+      "formula": null,
+      "example": null
+    },
+    {
+      "id": 1774898893,
+      "subject": "Current Affairs",
+      "topic": "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay",
+      "difficulty": "Easy",
+      "content": "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
+      "key_points": [
+        "T.N. Assembly election: Tamil Nadu needs to be saved from the DMK, says Vijay",
+        "यह करंट अफेयर्स से जुड़ा है",
+        "परीक्षा में पूछे जाने की संभावना है"
+      ],
+      "formula": null,
+      "example": null
+    },
+    {
+      "id": 1774898894,
+      "subject": "Current Affairs",
+      "topic": "BDA calls tender for Peripheral Ring Road-1 project",
+      "difficulty": "Easy",
+      "content": "BDA calls tender for Peripheral Ring Road-1 project हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
+      "key_points": [
+        "BDA calls tender for Peripheral Ring Road-1 project",
+        "यह करंट अफेयर्स से जुड़ा है",
+        "परीक्षा में पूछे जाने की संभावना है"
+      ],
+      "formula": null,
+      "example": null
+    },
+    {
+      "id": 1774898895,
+      "subject": "Current Affairs",
+      "topic": "CPI(M) names candidates for five constituencies",
+      "difficulty": "Easy",
+      "content": "CPI(M) names candidates for five constituencies हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
+      "key_points": [
+        "CPI(M) names candidates for five constituencies",
+        "यह करंट अफेयर्स से जुड़ा है",
+        "परीक्षा में पूछे जाने की संभावना है"
+      ],
+      "formula": null,
+      "example": null
+    },
+    {
+      "id": 1774898896,
+      "subject": "Current Affairs",
+      "topic": "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore",
+      "difficulty": "Easy",
+      "content": "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
+      "key_points": [
+        "T.N. Assembly election: Chief Minister M.K. Stalin’s assets estimated at ₹6.25 crore",
+        "यह करंट अफेयर्स से जुड़ा है",
+        "परीक्षा में पूछे जाने की संभावना है"
+      ],
+      "formula": null,
+      "example": null
+    },
     {
       "id": 1,
       "subject": "Reasoning",
