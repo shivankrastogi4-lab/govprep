@@ -2,6 +2,48 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Zelensky says allies asked him to scale back attacks on Russian energy",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Most Syrian refugees in Germany expected to return home in three years, Merz says",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "At central Travancore rally, Rahul promises to raise rubber price to ₹250",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Barring one, entire top leadership of Maoists wiped out, Amit Shah tells Lok Sabha",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Centre eyes new regulation to cover social media users",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Delhi Police arrests Lashkar-e-Taiba operative",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "More than 85,000 cases disposed of in Chamarajanagar during this year’s Mega Lok Adalat",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "How the US could try to seize Iran's Kharg Island",
       "source": "News",
       "time": "Today"
