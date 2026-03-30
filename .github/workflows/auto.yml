@@ -22,14 +22,12 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run scripts
-      working-directory: govprep
       run: |
         python backend/auto_update.py
         python backend/auto_quiz.py
         python backend/auto_notes.py
 
     - name: Commit changes
-      working-directory: govprep
       run: |
         git config --global user.name "auto-bot"
         git config --global user.email "bot@example.com"
