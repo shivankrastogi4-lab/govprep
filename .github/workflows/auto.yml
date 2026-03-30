@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # 🔥 IMPORTANT (push fix)
+      contents: write
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4   # ✅ updated
+      uses: actions/checkout@v4
 
     - name: Setup Python
-      uses: actions/setup-python@v5   # ✅ updated
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
@@ -32,11 +32,11 @@ jobs:
         python backend/auto_quiz.py
         python backend/auto_notes.py
 
-    - name: Commit changes
-  run: |
-    git config --global user.name "auto-bot"
-    git config --global user.email "bot@example.com"
-    git pull origin main --rebase
-    git add .
-    git commit -m "Auto update content" || echo "No changes"
-    git push origin main
+    - name: Commit changes   # ✅ ANDAR LAYA
+      run: |
+        git config --global user.name "auto-bot"
+        git config --global user.email "bot@example.com"
+        git pull origin main --rebase
+        git add .
+        git commit -m "Auto update content" || echo "No changes"
+        git push origin main
