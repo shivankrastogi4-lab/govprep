@@ -5,7 +5,7 @@ from datetime import datetime
 def generate_notes(news_list):
     notes = []
 
-    for i, news in enumerate(news_list[:5]):
+    for i, news in enumerate(news_list[:20]):
         note = {
             "id": int(datetime.now().timestamp()) + i,
             "subject": "Current Affairs",
