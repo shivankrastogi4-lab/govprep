@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | GovPrep India</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    .admin-sidebar {
+      width: 240px; min-height: 100vh; background: var(--bg2);
+      border-right: 1px solid var(--border); position: fixed;
+      top: 0; left: 0; z-index: 100; display: flex; flex-direction: column;
+    }
+    .admin-logo {
+      padding: 20px 24px; border-bottom: 1px solid var(--border);
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1rem;
+    }
+    .admin-nav { padding: 12px; flex: 1; }
+    .admin-nav-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 8px; font-size: 0.88rem;
+      font-weight: 600; color: var(--text2); cursor: pointer;
+      transition: all 0.2s; margin-bottom: 4px; border: none;
+      background: none; width: 100%; text-align: left;
+    }
+    .admin-nav-item:hover { background: var(--surface); color: var(--text); }
+    .admin-nav-item.active { background: rgba(244,162,97,0.15); color: var(--accent); }
+    .admin-main { margin-left: 240px; min-height: 100vh; background: var(--bg); }
+    .admin-topbar {
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      padding: 16px 32px; display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .admin-content { padding: 32px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .form-group { margin-bottom: 18px; }
+    .form-label {
+      display: block; font-size: 0.78rem; font-weight: 700;
+      color: var(--text3); margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .form-input {
+      width: 100%; padding: 10px 14px; background: var(--bg2);
+      border: 1px solid var(--border); border-radius: 8px;
+      color: var(--text); font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: var(--accent); }
+    textarea.form-input { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .admin-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 16px;
+    }
+    .admin-card-header {
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--bg2);
+    }
+    .admin-card-body { padding: 20px; }
+    .item-list { display: flex; flex-direction: column; gap: 10px; }
+    .item-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; background: var(--bg2);
+      border: 1px solid var(--border); border-radius: 8px;
+    }
+    .item-row-content { flex: 1; }
+    .item-row-title { font-size: 0.9rem; font-weight: 600; }
+    .item-row-meta { font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+    .btn-delete {
+      padding: 6px 12px; border-radius: 6px; font-size: 0.75rem;
+      font-weight: 700; background: rgba(230,57,70,0.1);
+      color: var(--red); border: 1px solid rgba(230,57,70,0.2);
+      cursor: pointer; transition: all 0.2s; flex-shrink: 0;
+    }
+    .btn-delete:hover { background: rgba(230,57,70,0.2); }
+    .alert {
+      padding: 12px 16px; border-radius: 8px; font-size: 0.88rem;
+      margin-bottom: 16px; display: none;
+    }
+    .alert-success { background: rgba(42,157,143,0.12); border: 1px solid rgba(42,157,143,0.3); color: var(--accent3); }
+    .alert-error { background: rgba(230,57,70,0.1); border: 1px solid rgba(230,57,70,0.3); color: var(--red); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 32px; }
+    .stat-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; text-align: center;
+    }
+    .stat-box .num {
+      font-family: 'Sora',sans-serif; font-size: 2rem;
+      font-weight: 800; color: var(--accent);
+    }
+    .stat-box .lbl { font-size: 0.78rem; color: var(--text3); margin-top: 4px; }
+    .section-divider { height: 1px; background: var(--border); margin: 24px 0; }
+    @media(max-width:768px) {
+      .admin-sidebar { display: none; }
+      .admin-main { margin-left: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="admin-sidebar">
+  <div class="admin-logo">⚙️ Admin Panel</div>
+  <nav class="admin-nav">
+    <button class="admin-nav-item active" onclick="showTab('dashboard',this)">📊 Dashboard</button>
+    <button class="admin-nav-item" onclick="showTab('quiz',this)">🧠 Quiz Questions</button>
+    <button class="admin-nav-item" onclick="showTab('notes',this)">📚 Study Notes</button>
+    <button class="admin-nav-item" onclick="showTab('notifications',this)">📢 Notifications</button>
+    <button class="admin-nav-item" onclick="showTab('videos',this)">📺 Videos</button>
+  </nav>
+  <div style="padding:16px 24px;border-top:1px solid var(--border)">
+    <a href="/admin/logout" style="font-size:0.82rem;color:var(--red);font-weight:600">🚪 Logout</a>
+    <br><a href="/" style="font-size:0.78rem;color:var(--text3);margin-top:6px;display:inline-block">← View Site</a>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="admin-main">
+  <div class="admin-topbar">
+    <div>
+      <span style="font-weight:800;font-size:1rem" id="pageTitle">Dashboard</span>
+      <span style="color:var(--text3);font-size:0.82rem;margin-left:8px">GovPrep Admin</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="theme-btn" id="themeBtn" onclick="Theme.toggle()">☀️</button>
+      <a href="/" class="btn btn-outline btn-sm">View Site →</a>
+    </div>
+  </div>
+
+  <div class="admin-content">
+
+    <!-- DASHBOARD -->
+    <div class="tab-panel active" id="tab-dashboard">
+      <div class="stats-grid">
+        <div class="stat-box"><div class="num" id="stat-q">—</div><div class="lbl">Quiz Questions</div></div>
+        <div class="stat-box"><div class="num" id="stat-n">—</div><div class="lbl">Study Notes</div></div>
+        <div class="stat-box"><div class="num" id="stat-v">—</div><div class="lbl">Videos</div></div>
+        <div class="stat-box"><div class="num" id="stat-lb">—</div><div class="lbl">Leaderboard Entries</div></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-header"><strong>🏆 Recent Leaderboard</strong></div>
+        <div class="admin-card-body">
+          <div id="lbPreview"></div>
+        </div>
+      </div>
+      <div style="margin-top:20px;background:rgba(244,162,97,0.07);border:1px solid rgba(244,162,97,0.2);border-radius:var(--radius);padding:16px 20px;font-size:0.88rem;color:var(--text2)">
+        💡 <strong style="color:var(--accent)">Tip:</strong> Koi bhi change karne ke baad website pe automatically reflect hota hai — no restart needed!
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="tab-panel" id="tab-quiz">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <strong>➕ New Quiz Question Add Karo</strong>
+        </div>
+        <div class="admin-card-body">
+          <div id="quiz-alert" class="alert"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-input" id="q-subject">
+                <option>General Awareness</option>
+                <option>Quantitative Aptitude</option>
+                <option>Reasoning</option>
+                <option>English</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correct Answer (0=A, 1=B, 2=C, 3=D)</label>
+              <select class="form-input" id="q-answer">
+                <option value="0">A (Option 1)</option>
+                <option value="1">B (Option 2)</option>
+                <option value="2">C (Option 3)</option>
+                <option value="3">D (Option 4)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Question</label>
+            <textarea class="form-input" id="q-question" placeholder="Question likho..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Option A</label>
+              <input class="form-input" id="q-opt0" placeholder="Option A">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Option B</label>
+              <input class="form-input" id="q-opt1" placeholder="Option B">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Option C</label>
+              <input class="form-input" id="q-opt2" placeholder="Option C">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Option D</label>
+              <input class="form-input" id="q-opt3" placeholder="Option D">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Explanation</label>
+            <textarea class="form-input" id="q-explanation" placeholder="Answer ka explanation..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="addQuiz()">➕ Question Add Karo</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <strong>📋 All Questions (<span id="q-count">0</span>)</strong>
+          <button class="btn btn-outline btn-sm" onclick="loadQuizList()">🔄 Refresh</button>
+        </div>
+        <div class="admin-card-body">
+          <div class="item-list" id="quizList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div class="tab-panel" id="tab-notes">
+      <div class="admin-card">
+        <div class="admin-card-header"><strong>➕ New Note Add Karo</strong></div>
+        <div class="admin-card-body">
+          <div id="notes-alert" class="alert"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-input" id="n-subject">
+                <option>Reasoning</option>
+                <option>Quantitative Aptitude</option>
+                <option>English</option>
+                <option>General Awareness</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Difficulty</label>
+              <select class="form-input" id="n-difficulty">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Topic Name</label>
+            <input class="form-input" id="n-topic" placeholder="e.g. Ratio and Proportion">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Content (Overview)</label>
+            <textarea class="form-input" id="n-content" placeholder="Topic ka overview likho..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Formula (optional)</label>
+            <input class="form-input" id="n-formula" placeholder="e.g. SI = PRT/100">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Key Points (ek ek line mein, Enter se alag karo)</label>
+            <textarea class="form-input" id="n-keypoints" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Example (optional)</label>
+            <textarea class="form-input" id="n-example" placeholder="Example likho..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="addNote()">➕ Note Add Karo</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <strong>📋 All Notes (<span id="n-count">0</span>)</strong>
+          <button class="btn btn-outline btn-sm" onclick="loadNotesList()">🔄 Refresh</button>
+        </div>
+        <div class="admin-card-body">
+          <div class="item-list" id="notesList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="tab-panel" id="tab-notifications">
+      <div class="admin-card">
+        <div class="admin-card-header"><strong>➕ New Notification Add Karo</strong></div>
+        <div class="admin-card-body">
+          <div id="notif-alert" class="alert"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-input" id="notif-category">
+                <option>SSC</option>
+                <option>Banking</option>
+                <option>Railways</option>
+                <option>UPSC</option>
+                <option>State</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Source (e.g. SSC Official)</label>
+              <input class="form-input" id="notif-source" placeholder="Source ka naam">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Title / Headline</label>
+            <input class="form-input" id="notif-title" placeholder="Notification ka title likho...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Time (e.g. Today, 2 days ago)</label>
+            <input class="form-input" id="notif-time" placeholder="e.g. Today" value="Today">
+          </div>
+          <button class="btn btn-primary" onclick="addNotification()">➕ Notification Add Karo</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <strong>📋 All Notifications (<span id="notif-count">0</span>)</strong>
+          <button class="btn btn-outline btn-sm" onclick="loadNotifList()">🔄 Refresh</button>
+        </div>
+        <div class="admin-card-body">
+          <div class="item-list" id="notifList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEOS -->
+    <div class="tab-panel" id="tab-videos">
+      <div class="admin-card">
+        <div class="admin-card-header"><strong>➕ New Video Add Karo</strong></div>
+        <div class="admin-card-body">
+          <div id="video-alert" class="alert"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-input" id="v-category">
+                <option>SSC</option>
+                <option>Banking</option>
+                <option>Reasoning</option>
+                <option>Quant</option>
+                <option>English</option>
+                <option>GK</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Duration (e.g. 45:30)</label>
+              <input class="form-input" id="v-duration" placeholder="45:30">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Video Title</label>
+            <input class="form-input" id="v-title" placeholder="Video ka title">
+          </div>
+          <div class="form-group">
+            <label class="form-label">YouTube Video ID</label>
+            <input class="form-input" id="v-ytid" placeholder="e.g. dQw4w9WgXcQ (URL mein ?v= ke baad wala)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Channel Name</label>
+            <input class="form-input" id="v-channel" placeholder="e.g. Study IQ">
+          </div>
+          <button class="btn btn-primary" onclick="addVideo()">➕ Video Add Karo</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <strong>📋 All Videos (<span id="v-count">0</span>)</strong>
+          <button class="btn btn-outline btn-sm" onclick="loadVideosList()">🔄 Refresh</button>
+        </div>
+        <div class="admin-card-body">
+          <div class="item-list" id="videosList"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+<script>
+// ── Tab switching ──
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.admin-nav-item').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+  const titles = {dashboard:'Dashboard',quiz:'Quiz Questions',notes:'Study Notes',notifications:'Notifications',videos:'Videos'};
+  document.getElementById('pageTitle').textContent = titles[id];
+  if(id==='quiz') loadQuizList();
+  if(id==='notes') loadNotesList();
+  if(id==='notifications') loadNotifList();
+  if(id==='videos') loadVideosList();
+}
+
+// ── Alert helper ──
+function showAlert(id, msg, type='success') {
+  const el = document.getElementById(id);
+  el.className = 'alert alert-' + type;
+  el.textContent = (type==='success'?'✅ ':'❌ ') + msg;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 3000);
+}
+
+// ── Dashboard load ──
+async function loadDashboard() {
+  const [q, n, v, lb] = await Promise.all([
+    fetch('/api/quiz').then(r=>r.json()),
+    fetch('/api/notes').then(r=>r.json()),
+    fetch('/api/videos').then(r=>r.json()),
+    fetch('/api/leaderboard').then(r=>r.json())
+  ]);
+  document.getElementById('stat-q').textContent = q.total;
+  document.getElementById('stat-n').textContent = n.total;
+  document.getElementById('stat-v').textContent = v.videos.length;
+  document.getElementById('stat-lb').textContent = lb.leaderboard.length;
+  const lbEl = document.getElementById('lbPreview');
+  if(lb.leaderboard.length === 0) {
+    lbEl.innerHTML = '<div style="color:var(--text3);text-align:center;padding:20px">Abhi koi entries nahi hain</div>';
+  } else {
+    lbEl.innerHTML = lb.leaderboard.slice(0,5).map((e,i) => `
+      <div class="item-row">
+        <div style="width:28px;height:28px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800">${i+1}</div>
+        <div class="item-row-content">
+          <div class="item-row-title">${e.name}</div>
+          <div class="item-row-meta">${e.date}</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent)">${e.score}/${e.total}</div>
+      </div>
+    `).join('');
+  }
+}
+
+// ── QUIZ ──
+async function loadQuizList() {
+  const data = await fetch('/api/quiz').then(r=>r.json());
+  document.getElementById('q-count').textContent = data.total;
+  const labels = ['A','B','C','D'];
+  document.getElementById('quizList').innerHTML = data.questions.map((q,i) => `
+    <div class="item-row">
+      <div style="width:32px;height:32px;border-radius:6px;background:rgba(244,162,97,0.15);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0">${i+1}</div>
+      <div class="item-row-content">
+        <div class="item-row-title">${q.question.substring(0,80)}${q.question.length>80?'...':''}</div>
+        <div class="item-row-meta">${q.subject} • Ans: ${labels[q.answer]}) ${q.options[q.answer]}</div>
+      </div>
+      <button class="btn-delete" onclick="deleteQuiz(${q.id})">🗑️ Delete</button>
+    </div>
+  `).join('') || '<div style="color:var(--text3);text-align:center;padding:20px">Koi questions nahi hain</div>';
+}
+
+async function addQuiz() {
+  const opts = [0,1,2,3].map(i => document.getElementById('q-opt'+i).value.trim());
+  const q = {
+    subject: document.getElementById('q-subject').value,
+    question: document.getElementById('q-question').value.trim(),
+    options: opts,
+    answer: parseInt(document.getElementById('q-answer').value),
+    explanation: document.getElementById('q-explanation').value.trim()
+  };
+  if(!q.question || opts.some(o=>!o) || !q.explanation) {
+    showAlert('quiz-alert','Saare fields fill karo!','error'); return;
+  }
+  const res = await fetch('/admin/api/add-quiz', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(q)});
+  const data = await res.json();
+  if(data.status==='ok') {
+    showAlert('quiz-alert','Question add ho gaya! ✅');
+    ['q-question','q-opt0','q-opt1','q-opt2','q-opt3','q-explanation'].forEach(id => document.getElementById(id).value='');
+    loadQuizList();
+  } else { showAlert('quiz-alert', data.error || 'Error!','error'); }
+}
+
+async function deleteQuiz(id) {
+  if(!confirm('Is question ko delete karo?')) return;
+  const res = await fetch('/admin/api/delete-quiz/'+id, {method:'DELETE'});
+  const data = await res.json();
+  if(data.status==='ok') { showAlert('quiz-alert','Deleted!'); loadQuizList(); }
+}
+
+// ── NOTES ──
+async function loadNotesList() {
+  const data = await fetch('/api/notes').then(r=>r.json());
+  document.getElementById('n-count').textContent = data.total;
+  document.getElementById('notesList').innerHTML = data.notes.map(n => `
+    <div class="item-row">
+      <div style="width:32px;height:32px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📚</div>
+      <div class="item-row-content">
+        <div class="item-row-title">${n.topic}</div>
+        <div class="item-row-meta">${n.subject} • ${n.difficulty}</div>
+      </div>
+      <button class="btn-delete" onclick="deleteNote(${n.id})">🗑️ Delete</button>
+    </div>
+  `).join('') || '<div style="color:var(--text3);text-align:center;padding:20px">Koi notes nahi hain</div>';
+}
+
+async function addNote() {
+  const kps = document.getElementById('n-keypoints').value.trim().split('\n').filter(k=>k.trim());
+  const n = {
+    subject: document.getElementById('n-subject').value,
+    difficulty: document.getElementById('n-difficulty').value,
+    topic: document.getElementById('n-topic').value.trim(),
+    content: document.getElementById('n-content').value.trim(),
+    formula: document.getElementById('n-formula').value.trim() || null,
+    key_points: kps,
+    example: document.getElementById('n-example').value.trim() || null
+  };
+  if(!n.topic || !n.content || kps.length===0) {
+    showAlert('notes-alert','Topic, content aur key points zaroor bharo!','error'); return;
+  }
+  const res = await fetch('/admin/api/add-note',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(n)});
+  const data = await res.json();
+  if(data.status==='ok') {
+    showAlert('notes-alert','Note add ho gaya! ✅');
+    ['n-topic','n-content','n-formula','n-keypoints','n-example'].forEach(id=>document.getElementById(id).value='');
+    loadNotesList();
+  } else { showAlert('notes-alert',data.error||'Error!','error'); }
+}
+
+async function deleteNote(id) {
+  if(!confirm('Is note ko delete karo?')) return;
+  const res = await fetch('/admin/api/delete-note/'+id,{method:'DELETE'});
+  const data = await res.json();
+  if(data.status==='ok') { showAlert('notes-alert','Deleted!'); loadNotesList(); }
+}
+
+// ── NOTIFICATIONS ──
+async function loadNotifList() {
+  const res = await fetch('/admin/api/notifications');
+  const data = await res.json();
+  document.getElementById('notif-count').textContent = data.notifications.length;
+  const catColors = {SSC:'tag-red',Banking:'tag-blue',Railways:'tag-green',UPSC:'tag-purple',State:'tag-orange'};
+  document.getElementById('notifList').innerHTML = data.notifications.map((n,i) => `
+    <div class="item-row">
+      <span class="tag ${catColors[n.category]||'tag-orange'}">${n.category}</span>
+      <div class="item-row-content">
+        <div class="item-row-title">${n.title}</div>
+        <div class="item-row-meta">${n.source} • ${n.time}</div>
+      </div>
+      <button class="btn-delete" onclick="deleteNotif(${i})">🗑️ Delete</button>
+    </div>
+  `).join('') || '<div style="color:var(--text3);text-align:center;padding:20px">Koi notifications nahi hain</div>';
+}
+
+async function addNotification() {
+  const n = {
+    category: document.getElementById('notif-category').value,
+    title: document.getElementById('notif-title').value.trim(),
+    source: document.getElementById('notif-source').value.trim(),
+    time: document.getElementById('notif-time').value.trim()
+  };
+  if(!n.title || !n.source) { showAlert('notif-alert','Title aur source bharo!','error'); return; }
+  const res = await fetch('/admin/api/add-notification',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(n)});
+  const data = await res.json();
+  if(data.status==='ok') {
+    showAlert('notif-alert','Notification add ho gayi! ✅');
+    ['notif-title','notif-source'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('notif-time').value='Today';
+    loadNotifList();
+  } else { showAlert('notif-alert',data.error||'Error!','error'); }
+}
+
+async function deleteNotif(idx) {
+  if(!confirm('Is notification ko delete karo?')) return;
+  const res = await fetch('/admin/api/delete-notification/'+idx,{method:'DELETE'});
+  const data = await res.json();
+  if(data.status==='ok') { showAlert('notif-alert','Deleted!'); loadNotifList(); }
+}
+
+// ── VIDEOS ──
+async function loadVideosList() {
+  const data = await fetch('/api/videos').then(r=>r.json());
+  document.getElementById('v-count').textContent = data.videos.length;
+  document.getElementById('videosList').innerHTML = data.videos.map(v => `
+    <div class="item-row">
+      <img src="${v.thumbnail}" style="width:80px;height:45px;object-fit:cover;border-radius:6px;flex-shrink:0" onerror="this.style.display='none'">
+      <div class="item-row-content">
+        <div class="item-row-title">${v.title.substring(0,60)}${v.title.length>60?'...':''}</div>
+        <div class="item-row-meta">${v.channel} • ${v.category} • ${v.duration}</div>
+      </div>
+      <button class="btn-delete" onclick="deleteVideo(${v.id})">🗑️ Delete</button>
+    </div>
+  `).join('') || '<div style="color:var(--text3);text-align:center;padding:20px">Koi videos nahi hain</div>';
+}
+
+async function addVideo() {
+  const ytid = document.getElementById('v-ytid').value.trim();
+  const v = {
+    title: document.getElementById('v-title').value.trim(),
+    youtube_id: ytid,
+    channel: document.getElementById('v-channel').value.trim(),
+    category: document.getElementById('v-category').value,
+    duration: document.getElementById('v-duration').value.trim(),
+    thumbnail: `https://img.youtube.com/vi/${ytid}/hqdefault.jpg`
+  };
+  if(!v.title || !v.youtube_id || !v.channel) {
+    showAlert('video-alert','Title, YouTube ID aur Channel naam bharo!','error'); return;
+  }
+  const res = await fetch('/admin/api/add-video',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(v)});
+  const data = await res.json();
+  if(data.status==='ok') {
+    showAlert('video-alert','Video add ho gayi! ✅');
+    ['v-title','v-ytid','v-channel','v-duration'].forEach(id=>document.getElementById(id).value='');
+    loadVideosList();
+  } else { showAlert('video-alert',data.error||'Error!','error'); }
+}
+
+async function deleteVideo(id) {
+  if(!confirm('Is video ko delete karo?')) return;
+  const res = await fetch('/admin/api/delete-video/'+id,{method:'DELETE'});
+  const data = await res.json();
+  if(data.status==='ok') { showAlert('video-alert','Deleted!'); loadVideosList(); }
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', loadDashboard);
+</script>
+</body>
+</html>

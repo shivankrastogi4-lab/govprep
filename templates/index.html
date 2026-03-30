@@ -75,38 +75,18 @@
       <a href="/exams" class="see-all">View all →</a>
     </div>
     <div class="updates-list">
+      {% set cat_colors = {'SSC':'tag-red','Banking':'tag-blue','Railways':'tag-green','UPSC':'tag-purple','State':'tag-orange'} %}
+      {% set dot_colors = {'SSC':'var(--accent)','Banking':'var(--accent4)','Railways':'var(--accent3)','UPSC':'#c084fc','State':'var(--yellow)'} %}
+      {% for notif in notifications[:4] %}
       <div class="update-item">
-        <div class="update-dot"></div>
+        <div class="update-dot" style="background:{{ dot_colors.get(notif.category, 'var(--accent)') }}"></div>
         <div class="update-content">
-          <div class="update-title">SSC CGL 2024 Final Result Announced — Check on ssc.gov.in</div>
-          <div class="update-meta">Staff Selection Commission • 2 days ago</div>
+          <div class="update-title">{{ notif.title }}</div>
+          <div class="update-meta">{{ notif.source }} • {{ notif.time }}</div>
         </div>
-        <span class="tag tag-red">SSC</span>
+        <span class="tag {{ cat_colors.get(notif.category, 'tag-orange') }}">{{ notif.category }}</span>
       </div>
-      <div class="update-item">
-        <div class="update-dot" style="background:var(--accent4)"></div>
-        <div class="update-content">
-          <div class="update-title">IBPS PO 2025 Notification expected in August — 4000+ vacancies</div>
-          <div class="update-meta">IBPS Official • 5 days ago</div>
-        </div>
-        <span class="tag tag-blue">Banking</span>
-      </div>
-      <div class="update-item">
-        <div class="update-dot" style="background:var(--accent3)"></div>
-        <div class="update-content">
-          <div class="update-title">RRB NTPC Phase 7 CBT 1 Admit Card Released — Download Now</div>
-          <div class="update-meta">Railway Recruitment Board • 1 week ago</div>
-        </div>
-        <span class="tag tag-green">Railways</span>
-      </div>
-      <div class="update-item">
-        <div class="update-dot" style="background:#c084fc"></div>
-        <div class="update-content">
-          <div class="update-title">UPSC CSE 2025 Prelims Scheduled for June 1, 2025 — 1056 vacancies</div>
-          <div class="update-meta">UPSC Official • 1 week ago</div>
-        </div>
-        <span class="tag tag-purple">UPSC</span>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

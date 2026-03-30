@@ -1,0 +1,34 @@
+{
+  "notifications": [
+    {
+      "category": "SSC",
+      "title": "Test Notif",
+      "source": "Test",
+      "time": "Today"
+    },
+    {
+      "category": "SSC",
+      "title": "SSC CGL 2024 Final Result Announced — Check on ssc.gov.in",
+      "source": "Staff Selection Commission",
+      "time": "2 days ago"
+    },
+    {
+      "category": "Banking",
+      "title": "IBPS PO 2025 Notification expected in August — 4000+ vacancies",
+      "source": "IBPS Official",
+      "time": "5 days ago"
+    },
+    {
+      "category": "Railways",
+      "title": "RRB NTPC Phase 7 CBT 1 Admit Card Released — Download Now",
+      "source": "Railway Recruitment Board",
+      "time": "1 week ago"
+    },
+    {
+      "category": "UPSC",
+      "title": "UPSC CSE 2025 Prelims Scheduled for June 1, 2025 — 1056 vacancies",
+      "source": "UPSC Official",
+      "time": "1 week ago"
+    }
+  ]
+}
