@@ -34,16 +34,37 @@
       ]
     },
     {
-      "category": "Reasoning",
-      "content": "Coding Decoding tricks"
+      "subject": "Reasoning",
+      "topic": "Coding Decoding",
+      "difficulty": "Medium",
+      "overview": "Coding Decoding tricks",
+      "key_points": [
+        "Understand pattern",
+        "Use logic",
+        "Practice daily"
+      ]
     },
     {
-      "category": "Quant",
-      "content": "Percentage formulas"
+      "subject": "Quant",
+      "topic": "Percentage",
+      "difficulty": "Medium",
+      "overview": "Percentage formulas",
+      "key_points": [
+        "Use percentage basics",
+        "Apply shortcut tricks",
+        "Practice regularly"
+      ]
     },
     {
-      "category": "English",
-      "content": "Tense rules"
+      "subject": "English",
+      "topic": "Tense",
+      "difficulty": "Easy",
+      "overview": "Tense rules",
+      "key_points": [
+        "Learn forms",
+        "Identify tense",
+        "Practice sentences"
+      ]
     }
   ]
 }
