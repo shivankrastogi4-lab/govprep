@@ -2,6 +2,18 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Shielding ‘choice’ from ‘honour’",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Parliament Budget Session updates: Maoism has been almost eradicated from Bastar, the region is now on the path of development, says Amit Shah",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Bastar close to being considered Naxal-free, possibility of revival extremely remote: IGP",
       "source": "News",
       "time": "Today"
@@ -287,18 +299,6 @@
       "title": "Test Notif",
       "source": "Test",
       "time": "Today"
-    },
-    {
-      "category": "SSC",
-      "title": "SSC CGL 2024 Final Result Announced — Check on ssc.gov.in",
-      "source": "Staff Selection Commission",
-      "time": "2 days ago"
-    },
-    {
-      "category": "Banking",
-      "title": "IBPS PO 2025 Notification expected in August — 4000+ vacancies",
-      "source": "IBPS Official",
-      "time": "5 days ago"
     }
   ]
 }
