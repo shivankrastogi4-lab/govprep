@@ -1,92 +1,118 @@
 {
   "notes": [
     {
-      "category": "GK",
+      "subject": "GK",
+      "topic": "Daily Current Affairs",
+      "difficulty": "Easy",
       "content": "Daily Current Affairs Updated"
     },
     {
-      "category": "Reasoning",
-      "content": "Coding Decoding: Pattern-based logic questions"
+      "subject": "Reasoning",
+      "topic": "Coding Decoding",
+      "difficulty": "Medium",
+      "content": "Pattern-based logic questions"
     },
     {
-      "category": "Reasoning",
-      "content": "Blood Relation: Family tree problems"
+      "subject": "Reasoning",
+      "topic": "Blood Relation",
+      "difficulty": "Medium",
+      "content": "Family tree problems"
     },
     {
-      "category": "Reasoning",
-      "content": "Direction Test: Left-right orientation"
+      "subject": "Reasoning",
+      "topic": "Direction Test",
+      "difficulty": "Easy",
+      "content": "Left-right orientation"
     },
     {
-      "category": "Reasoning",
-      "content": "Syllogism: Logical Venn diagram problems"
+      "subject": "Reasoning",
+      "topic": "Syllogism",
+      "difficulty": "Medium",
+      "content": "Logical Venn diagram problems"
     },
     {
-      "category": "Reasoning",
-      "content": "Seating Arrangement: Puzzle solving tricks"
+      "subject": "Reasoning",
+      "topic": "Seating Arrangement",
+      "difficulty": "Hard",
+      "content": "Puzzle solving tricks"
     },
     {
-      "category": "Quant",
-      "content": "Percentage: Basic formula and tricks"
+      "subject": "Quant",
+      "topic": "Percentage",
+      "difficulty": "Easy",
+      "content": "Basic formula and tricks"
     },
     {
-      "category": "Quant",
-      "content": "Profit & Loss: CP/SP formulas"
+      "subject": "Quant",
+      "topic": "Profit & Loss",
+      "difficulty": "Medium",
+      "content": "CP/SP formulas"
     },
     {
-      "category": "Quant",
-      "content": "Time & Work: Work efficiency concept"
+      "subject": "Quant",
+      "topic": "Time & Work",
+      "difficulty": "Medium",
+      "content": "Work efficiency concept"
     },
     {
-      "category": "Quant",
-      "content": "Simple Interest: SI = (P×R×T)/100"
+      "subject": "Quant",
+      "topic": "Simple Interest",
+      "difficulty": "Easy",
+      "content": "SI = (P×R×T)/100"
     },
     {
-      "category": "Quant",
-      "content": "Speed Distance: Distance = Speed × Time"
+      "subject": "Quant",
+      "topic": "Speed Distance",
+      "difficulty": "Easy",
+      "content": "Distance = Speed × Time"
     },
     {
-      "category": "English",
-      "content": "Tense Rules: Present, Past, Future"
+      "subject": "English",
+      "topic": "Tense Rules",
+      "difficulty": "Easy",
+      "content": "Present, Past, Future"
     },
     {
-      "category": "English",
-      "content": "Articles: A, An, The usage"
+      "subject": "English",
+      "topic": "Articles",
+      "difficulty": "Easy",
+      "content": "A, An, The usage"
     },
     {
-      "category": "English",
-      "content": "Prepositions: In, On, At rules"
+      "subject": "English",
+      "topic": "Prepositions",
+      "difficulty": "Medium",
+      "content": "In, On, At rules"
     },
     {
-      "category": "English",
-      "content": "Active Passive Voice basics"
+      "subject": "English",
+      "topic": "Active Passive Voice",
+      "difficulty": "Medium",
+      "content": "Basics of voice change"
     },
     {
-      "category": "English",
-      "content": "Synonyms & Antonyms tricks"
+      "subject": "English",
+      "topic": "Synonyms & Antonyms",
+      "difficulty": "Medium",
+      "content": "Vocabulary tricks"
     },
     {
-      "category": "Reasoning",
-      "content": "Coding Decoding tricks"
+      "subject": "Reasoning",
+      "topic": "Coding Decoding Advanced",
+      "difficulty": "Hard",
+      "content": "Advanced tricks"
     },
     {
-      "category": "Quant",
-      "content": "Percentage formulas"
+      "subject": "Quant",
+      "topic": "Percentage Advanced",
+      "difficulty": "Medium",
+      "content": "Advanced formulas"
     },
     {
-      "category": "English",
-      "content": "Tense rules"
-    },
-    {
-      "category": "Reasoning",
-      "content": "Coding Decoding tricks"
-    },
-    {
-      "category": "Quant",
-      "content": "Percentage formulas"
-    },
-    {
-      "category": "English",
-      "content": "Tense rules"
+      "subject": "English",
+      "topic": "Tense Advanced",
+      "difficulty": "Medium",
+      "content": "Advanced tense rules"
     }
   ]
 }
