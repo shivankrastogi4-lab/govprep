@@ -39,8 +39,16 @@ def admin_required(f):
 
 @app.route('/')
 def home():
-    exams = load_json('exams.json')
-    notifications = load_json('notifications.json')['notifications']
+    try:
+        exams = load_json('exams.json')
+    except:
+        exams = {}
+
+    try:
+        notifications = load_json('notifications.json').get('notifications', [])
+    except:
+        notifications = []
+
     return render_template('index.html', exams=exams, notifications=notifications)
 
 @app.route('/notes')

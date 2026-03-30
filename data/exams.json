@@ -1,30 +1,26 @@
-@app.route('/exam/<exam_name>')
-def exam_page(exam_name):
-    exams = load_json('exams.json')
-
-    # 🔥 FIX: dict handle karo
-    if isinstance(exams, dict):
-        exam_data = exams.get(exam_name)
-    else:
-        exam_data = None
-        for exam in exams:
-            if isinstance(exam, dict) and exam.get('slug') == exam_name:
-                exam_data = exam
-                break
-
-    # fallback
-    if not exam_data:
-        exam_data = {
-            "name": exam_name.upper(),
-            "full_name": "Details coming soon...",
-            "category": "General",
-            "vacancy_approx": "N/A",
-            "salary": "N/A",
-            "eligibility": "N/A",
-            "syllabus": {},
-            "exam_pattern": {},
-            "strategy": [],
-            "previous_questions": []
-        }
-
-    return render_template('exam.html', exam=exam_data)
+{
+  "ssc": {
+    "id": "ssc",
+    "name": "SSC CGL",
+    "category": "SSC",
+    "vacancy_approx": "7500+"
+  },
+  "ibps_po": {
+    "id": "ibps_po",
+    "name": "IBPS PO",
+    "category": "Banking",
+    "vacancy_approx": "4000+"
+  },
+  "rrb_ntpc": {
+    "id": "rrb_ntpc",
+    "name": "RRB NTPC",
+    "category": "Railways",
+    "vacancy_approx": "35000+"
+  },
+  "upsc_cse": {
+    "id": "upsc_cse",
+    "name": "UPSC CSE",
+    "category": "State Exams",
+    "vacancy_approx": "1000+"
+  }
+}
