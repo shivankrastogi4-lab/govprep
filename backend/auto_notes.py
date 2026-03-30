@@ -1,61 +1,61 @@
 import json
 import os
-from datetime import datetime
+import random
 
-def generate_notes(news_list):
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, '..', 'data', 'notes.json')
+
+# 🧠 STATIC TOPICS
+reasoning = [
+    "Coding Decoding: Pattern-based logic questions",
+    "Blood Relation: Family tree problems",
+    "Direction Test: Left-right orientation",
+    "Syllogism: Logical Venn diagram problems",
+    "Seating Arrangement: Puzzle solving tricks"
+]
+
+quant = [
+    "Percentage: Basic formula and tricks",
+    "Profit & Loss: CP/SP formulas",
+    "Time & Work: Work efficiency concept",
+    "Simple Interest: SI = (P×R×T)/100",
+    "Speed Distance: Distance = Speed × Time"
+]
+
+english = [
+    "Tense Rules: Present, Past, Future",
+    "Articles: A, An, The usage",
+    "Prepositions: In, On, At rules",
+    "Active Passive Voice basics",
+    "Synonyms & Antonyms tricks"
+]
+
+def generate_notes():
     notes = []
 
-    for i, news in enumerate(news_list[:20]):
-        note = {
-            "id": int(datetime.now().timestamp()) + i,
-            "subject": "Current Affairs",
-            "topic": news['title'],
-            "difficulty": "Easy",
-            "content": f"{news['title']} हाल ही की महत्वपूर्ण खबर है। यह परीक्षा के लिए महत्वपूर्ण हो सकती है।",
-            "key_points": [
-                news['title'],
-                "यह करंट अफेयर्स से जुड़ा है",
-                "परीक्षा में पूछे जाने की संभावना है"
-            ],
-            "formula": None,
-            "example": None
-        }
+    # GK placeholder (already from news)
+    notes.append({"category": "GK", "content": "Daily Current Affairs Updated"})
 
-        notes.append(note)
+    for r in reasoning:
+        notes.append({"category": "Reasoning", "content": r})
+
+    for q in quant:
+        notes.append({"category": "Quant", "content": q})
+
+    for e in english:
+        notes.append({"category": "English", "content": e})
 
     return notes
 
 
-def update_notes():
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    NOTES_PATH = os.path.join(BASE_DIR, '..', 'data', 'notes.json')
-    NOTIF_PATH = os.path.join(BASE_DIR, '..', 'data', 'notifications.json')
+def save_notes():
+    notes = generate_notes()
 
-    # load news
-    with open(NOTIF_PATH, 'r', encoding='utf-8') as f:
-        notif_data = json.load(f)
+    with open(DATA_PATH, 'w', encoding='utf-8') as f:
+        json.dump({"notes": notes}, f, indent=2, ensure_ascii=False)
 
-    news_list = notif_data['notifications']
-
-    # load notes
-    with open(NOTES_PATH, 'r', encoding='utf-8') as f:
-        notes_data = json.load(f)
-
-    new_notes = generate_notes(news_list)
-
-    # duplicate remove
-    existing_topics = [n['topic'] for n in notes_data['notes']]
-    new_notes = [n for n in new_notes if n['topic'] not in existing_topics]
-
-    # limit
-    notes_data['notes'] = (new_notes + notes_data['notes'])[:50]
-
-    # save
-    with open(NOTES_PATH, 'w', encoding='utf-8') as f:
-        json.dump(notes_data, f, indent=2, ensure_ascii=False)
-
-    print(f"✅ {len(new_notes)} new notes added!")
+    print(f"✅ {len(notes)} notes added!")
 
 
 if __name__ == "__main__":
-    update_notes()
+    save_notes()
