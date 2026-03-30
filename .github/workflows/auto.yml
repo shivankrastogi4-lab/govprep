@@ -1,0 +1,38 @@
+name: Auto Update System
+
+on:
+  schedule:
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run scripts
+      working-directory: govprep
+      run: |
+        python backend/auto_update.py
+        python backend/auto_quiz.py
+        python backend/auto_notes.py
+
+    - name: Commit changes
+      working-directory: govprep
+      run: |
+        git config --global user.name "auto-bot"
+        git config --global user.email "bot@example.com"
+        git add .
+        git commit -m "Auto update content" || echo "No changes"
+        git push
