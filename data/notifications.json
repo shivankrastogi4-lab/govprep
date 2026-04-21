@@ -2,6 +2,66 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Trump says US will not lift Hormuz blockade until deal made with Iran",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "New era for Apple as names new boss to replace Tim Cook after 15 years",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Canadian killed in shooting at Mexico's ancient Teotihuacán pyramids",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Outrage over Israeli soldier's vandalism of Jesus statue in Lebanon",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "US singer D4vd pleads not guilty to murder in death of missing teen girl",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Row over BJP MLA’s remarks after son’s SUV rams into five people",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Special court castigates three police officers for false testimony in murder case against Congress MLA Vinay Kulkarni in Karnataka",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Air Arabia flight from Abu Dhabi lands safely in Thiruvananthapuram after suspected bird strike",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Election Commission will leave no stone unturned for free, fair and transparent election in West Bengal: CEC",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Assembly Elections 2026 LIVE: M.K. Stalin holds walk campaign in Chennai's Kannagi Nagar ahead of Tamil Nadu polls",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Man kills seven of his children, and an eighth child, in Louisiana mass shooting",
       "source": "News",
       "time": "Today"
@@ -237,66 +297,6 @@
     {
       "category": "Daily CA",
       "title": "Harivansh elected Deputy Chairman of Rajya Sabha unopposed",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Lyse Doucet: Under fragile ceasefire, Iranians wonder if US deal can be done",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Former US Marine pilot loses appeal against extradition from Australia",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Trump's rift with Pope is playing out in public - it's costing him valuable support",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Frank Gardner: What is China's role in the Iran war?",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Trump threatens to fire Fed chair Powell if he doesn't leave in May",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Two held in U.P.’s Bijnor over 'anti-national' activities, separate cases; foreign links probed",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Parliament special sitting LIVE: Bills to implement women's reservation and delimitation tabled in Lok Sabha",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Political parties firm on moving education back to State list, retaining two-language formula",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Assembly Elections 2026 LIVE: Bengal faced decade of lawlessness, says PM Modi",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "ISI-backed terror module busted; one held with four grenades: Punjab Police",
       "source": "News",
       "time": "Today"
     }
