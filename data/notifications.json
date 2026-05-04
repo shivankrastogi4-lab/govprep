@@ -2,6 +2,60 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Iran says US has responded to its latest peace proposal",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Three dead in suspected virus outbreak on Atlantic cruise ship",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Russian strikes kill 10 as Zelensky says Ukraine hits oil tankers and terminal",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Nigeria summons South African envoy over attacks on its nationals",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala Election Results 2026 LIVE: Initial trends show Congress-led UDF leading as vote counting progresses",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Tamil Nadu Assembly election results 2026 LIVE: TVK leaders Vijay, 'Bussy' Anand among those leading in first round of counting",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "LDF leads in 7 of 11 seats in Kannur as early trends emerge",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala Assembly polls: Kerala all set for counting day as ruling Left Democratic Front eyes third term, while Opposition UDF hopes for a comeback",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Assam election results LIVE: Counting underway; BJP takes early lead",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
       "source": "News",
       "time": "Today"
@@ -243,60 +297,6 @@
     {
       "category": "Daily CA",
       "title": "Comey charged with threatening Trump's life in Instagram post",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "United Arab Emirates to quit oil cartel Opec",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Musk says basis of charitable giving at stake in OpenAI lawsuit",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Third Ukrainian strike hits Russian oil refinery and prompts evacuations",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "US regulator to review Disney broadcast licences after Jimmy Kimmel joke about Melania Trump",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "What you need to know about Karnataka’s Rohith Vemula Bill",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Greater Chennai, northern T.N. may shape poll results",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Harsh sun leaves Kerala’s traditional fishers in distress",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "West Bengal Assembly polls Phase 2 LIVE: Mamata, Abhishek Banerjee visit polling booths in Bhabanipur",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Women lead new tourism wave in Kerala’s Maravanthuruth",
       "source": "News",
       "time": "Today"
     }
