@@ -2,6 +2,66 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Trump says US-Iran ceasefire still in place after exchange of fire in Strait of Hormuz",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Hantavirus outbreak on cruise ship not start of pandemic, UN health agency says",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Trump's 'irresponsible war' to blame for economic slowdown, German minister says",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Rosenberg: Russia's Victory Day parade with no tanks a sign Ukraine war not going to plan",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Trump gives EU ultimatum deadline to approve trade deal with US",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Caught between forests and fear: Karnataka’s growing human–animal conflict crisis",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Vehicles with fake number plates used to shoot Suvendu Adhikari’s aide: West Bengal police",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Telangana’s 2BHK dreams caught between delays, distance and vacancies",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Caste-iron control: The threat of Rajasthan’s caste panchayats",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kerala election results: Congress high command to pick Kerala CM; most UDF allies for Satheesan",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Iran considering US proposal as Trump says war will be 'over quickly'",
       "source": "News",
       "time": "Today"
@@ -237,66 +297,6 @@
     {
       "category": "Daily CA",
       "title": "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "The Iran war has strengthened Ukraine in surprising ways. Could a ceasefire with Russia be closer?",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "The clandestine network smuggling Starlink tech into Iran to beat internet blackout",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Concern for jailed Iranian Nobel laureate as family say health deteriorating",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "US threatens shipping firms with sanctions if they pay Iran tolls",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "SCR seeks land at four locations in Telangana for mega coaching terminals",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Assembly elections 2026 LIVE: 3-tier security, QR-based entry system for Tamil Nadu vote counting, says CEO",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Tribals, Scheduled Castes preserved India's identity and soul despite foreign invasions: Bhagwat",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "News in Frames: Ban season, but the catch holds",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "High speed mechanised boats proposed for Nellore fishermen",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "US to cut troop levels in Germany by 5,000 amid Trump spat with Merz",
       "source": "News",
       "time": "Today"
     }
