@@ -2,6 +2,60 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "More than 300,000 flee wildfires in France and Spain",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Trump takes swipes at press during White House Correspondents' Dinner",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "India's 'cockroach' protest called off after education minister quits",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Iran-backed Houthis claim missile attack on Saudi Arabia",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Two youths detained in Panaji over support for jailed activist Umar Khalid",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Are pellet guns legal for crowd control in India? | Explained",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "‘Congress will now demand accountability from BJP govt on paper leaks in Parliament,’ says Hooda",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Delhi Police likely to withdraw FIRs as agitation ends, says DCP",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Centre yet again rules out Metro Rail for Coimbatore and Madurai; recommends BRTS",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "More than 220,000 evacuated in France and Spain due to wildfires",
       "source": "News",
       "time": "Today"
@@ -243,60 +297,6 @@
     {
       "category": "Daily CA",
       "title": "US launches fresh strikes on Iran, as Trump warns of retaliation for deaths of soldiers",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Yemen's Houthis announce 'maritime embargo' on Saudi Arabia",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Tate brothers appear in US court for extradition proceedings",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Notorious drug cartel leader Ismael Zambada sentenced to life in US prison",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "CJP protest in Delhi highlights: Dipke, protesters reclaim dismantled Jantar Mantar protest site, as CJP awaits Govt response to demands",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "CJP protest in Delhi LIVE: Dipke apologises to CJP supporters who were 'brutally beaten' by police",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Accommodating dissent: On the TVK government’s actions",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "From IAC to paper leaks: Why anti-system movements pose a unique political challenge | Explained",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Suvendu makes public July 21 police firing report; slams Mamata for not acting on it when she was CM",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "US soldier killed and one injured after Iranian attack in Iraq",
       "source": "News",
       "time": "Today"
     }
