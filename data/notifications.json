@@ -2,6 +2,66 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Trump says he is banning CNN and Politico from White House",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Russian hybrid attacks against Europe intensifying, says Macron",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "71% consumers in Mumbai rarely asked for prescription, survey finds; Maharashtra FDA acted against 880 drug licensees in three months",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Nitish gave up CM's post on his own, BJP didn't ask him to do so: Samrat",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Three persons arrested for murder of father-daughter in gram panchayat office in Belagavi district",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "CMRL-Exalogic pay-off case: Keralam Advocate General recommends FIR registration against Pinarayi, daughter Veena, Riyas",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Mamata moves Supreme Court against ECI’s freeze on Trinamool Congress symbol",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Canada welcomes EU proposal to become 'associate member'",
       "source": "News",
       "time": "Today"
@@ -237,66 +297,6 @@
     {
       "category": "Daily CA",
       "title": "Four members of family die in fire at home in Belagavi",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Trump downplays warnings of AI risks, citing rivalry with China",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Questions mount over what an AI 'slowdown' would look like",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Swedish left-wing bloc narrowly ahead with election too close to call",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Six dead, 130 missing after Indonesian ferry capsizes in Java Sea",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Gadkari delayed by Mumbai traffic by nearly an hour, pitches new technology to replace ageing flyovers",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Waterlogging, poor drainage have halted industrial activity in West Bengal Panihati municipality for months",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "MPSC exam ‘paper leaks’: CJP to join protesters demanding resignation of key officials",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Why the BRICS summit was a major diplomatic win for India",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Jharkhand LoP accuses Soren-led govt. of protecting influential people amid CID probe into job exam ‘irregularities’",
       "source": "News",
       "time": "Today"
     }
