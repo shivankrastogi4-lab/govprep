@@ -2,6 +2,66 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "Trump announces deal for Russian diesel as Zelensky calls it a gift to Putin",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Analysis: Trump's shock Russia deal highlights mounting pressure to curb fuel prices",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "US country music star Ella Langley cancels show due to 'security threat'",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "'Stain on the country': Trump criticises Norway over Nobel Peace Prize",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Thousands of security personnel deployed as Delhi braces for ‘cockroach’ protest",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Anti-CEC Delhi protest LIVE updates: Dipke, other CJP leaders detained upon landing in Delhi; protesters being taken away from Jantar Mantar, nearby areas",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Delhi protest: CJP’s Abhijeet Dipke, Saurav Das, Ashutosh Ranka, Ratna Singh detained",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "In Pune, the long wait for a government job",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Five-tier security for Prime Minister’s Chennai visit",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Three Bangladeshi nationals held with forged identity documents in Kozhikode",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Suspect linked to Monaco bomb attack on millionaire speaks to BBC",
       "source": "News",
       "time": "Today"
@@ -237,66 +297,6 @@
     {
       "category": "Daily CA",
       "title": "Bengal bypoll: AJUP chief Humayun Kabir arrested in Rejinagar after verbal altercation with police",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "US air force removes all bombers from British military base RAF Fairford",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Brazil election goes to run-off as right-wing Flávio Bolsonaro wins first round",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Watch: How Brazil's dramatic election unfolded",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "France closes up to 500 schools Monday over student protests",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Delhi High Court dismisses pleas for SIT probe into 2020 riots, 2019 Jamia violence",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Abandon Pattinapakkam Assembly-cum-Secretariat complex project, insists PIL plea before Madras High Court",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Two arrested for allegedly drugging, gang-raping woman in Kochi",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Gyanesh Kumar undermined Election Commission’s independence: Sachin Pilot",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Use of Hindi on highways signboard cannot be treated as imposition: Cong MP",
       "source": "News",
       "time": "Today"
     }
