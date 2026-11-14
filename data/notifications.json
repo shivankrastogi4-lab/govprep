@@ -2,6 +2,66 @@
   "notifications": [
     {
       "category": "Daily CA",
+      "title": "What we know about the longest ground stop since 9/11",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Microsoft says services fully restored after for day-long global outage",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Setback for SpaceX Starship rocket's double-catch test",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Piyush Goyal in Egypt: Both sides to discuss increasing cooperation in infra, manufacturing, logistics",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Assam accident: Autopsy of 26 bodies on November 14; CM to visit injured, meet families of deceased",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Kurumba: a language and community fighting for visibility",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "No locus standi: Indian envoy hits back at USCIRF for remarks on Sharjeel Imam",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
+      "title": "Police fully empowered to curb drugs and substance abuse in the city: Kerala High Court",
+      "source": "News",
+      "time": "Today"
+    },
+    {
+      "category": "Daily CA",
       "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
       "source": "News",
       "time": "Today"
@@ -237,66 +297,6 @@
     {
       "category": "Daily CA",
       "title": "‘Where I truly belong’: Sonia Gandhi on her memoir ‘Belonging: A Journey of Love’",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Krakow shooting suspect has died in hospital, police say",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Inside the French drug gangs recruiting children to kill",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Seven dead and more than 100 injured after trains collide in Egypt",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Pope delivers veiled rebuke of Milei's austerity measures",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Muslim Youth League leaders booked over rally causing traffic obstruction in Kochi",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Congress slams Modi govt. for being in ‘denial’ on impact of air pollution on mortality",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "BJP slams Kharge for calling Diwali 'Eid of joy', dares Congress to call Eid 'Diwali of joy'",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "No major fire incidents reported in Delhi on Deepavali as city sees dip in fire-related calls",
-      "source": "News",
-      "time": "Today"
-    },
-    {
-      "category": "Daily CA",
-      "title": "Keralam film chamber opposes CBFC advisory allowing review, modification of movie titles",
       "source": "News",
       "time": "Today"
     }
